@@ -361,10 +361,13 @@
 # chuoi= a.count(" ")
 # print(chuoi+1)
 # bài 44: Nhập vào một chuỗi, hãy in từ đầu tiên trong chuỗi
-
+# chuoi = input("nhập vào một chuỗi: ")
+# a = chuoi.find(" ")
+# tudautien = chuoi[:a]
+# print(tudautien)
 # bài 45: Nhập vào một chuỗi có dạng 3 số nguyên, mỗi số nguyên cách nhau một dấu phẩy, hãy tính tổng 3 số nguyên đó
-# VD:
-# Nhập: 3, 12, 15
-# Tổng: 30
-
+chuoi = input("Nhập vào một chuỗi: ")
+a = chuoi.rfind(" ")
+chuoi0 = chuoi[:a]
+print(chuoi0)
 # bài 46: Nhập vào một chuỗi, hãy đếm xem trong chuỗi có bao nhiêu ký tự in hoa, bao nhiêu ký tự in thường, bao nhiêu ký tự số
