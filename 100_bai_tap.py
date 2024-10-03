@@ -366,8 +366,13 @@
 # tudautien = chuoi[:a]
 # print(tudautien)
 # bài 45: Nhập vào một chuỗi có dạng 3 số nguyên, mỗi số nguyên cách nhau một dấu phẩy, hãy tính tổng 3 số nguyên đó
-chuoi = input("Nhập vào một chuỗi: ")
-a = chuoi.rfind(" ")
-chuoi0 = chuoi[:a]
-print(chuoi0)
+# chuoi = input("Nhập vào một chuỗi: ")
+# a = chuoi. rfind(" ")
+# chuoi0 = chuoi[ :a]
+# print(chuoi0)
+# chuoi = input("Nhập vào một chuỗi: ")
+# chuoi_list = chuoi.split(" ")  # Tách chuỗi thành các từ
+# chuoi0 = " ".join(chuoi_list[:-1])  # Nối lại các từ trừ từ cuối cùng
+# print(chuoi0)
 # bài 46: Nhập vào một chuỗi, hãy đếm xem trong chuỗi có bao nhiêu ký tự in hoa, bao nhiêu ký tự in thường, bao nhiêu ký tự số
+
