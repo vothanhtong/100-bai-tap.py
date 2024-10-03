@@ -1,22 +1,23 @@
-# bài 1: Nhập vào số n, hãy nhân n lên cho 3, rồi cộng 1 sau đó in kết quả ra màn hình
+# BÀI TẬP NHẬP LIỆU VÀ TOÁN TỬ CƠ BẢN
+# BÀI 1: Nhập vào số n, hãy nhân n lên cho 3, rồi cộng 1 sau đó in kết quả ra màn hình
 # a=int(input("nhập vào số nguyên a: "))
 # n=(a*3)+1
 # print("khi a nhân cho ba và cộng cho một là: ",n)
-# bài 2: Nhập vào số n, hãy mũ 2 rồi chia cho 3, sau đó in kết quả ra màn hình
+# BÀI 2: Nhập vào số n, hãy mũ 2 rồi chia cho 3, sau đó in kết quả ra màn hình
 # a=int(input("nhập vào số nguyên a: "))
 # n=(a**2)/3
 # print("số in ra màng hình là: ",n)
-# bài 3:Nhập vào nhiệt độ c, in ra nhiệt độ F
+# BÀI 3:Nhập vào nhiệt độ c, in ra nhiệt độ F
 # a=float(input("nhập vào nhiệt độ c: "))
 # n=(a*1.8)+32
 # print("nhiệt độ f là: ",n)
-# bài 4:Nhập vào một số nguyên a, nếu a chia hết cho 2 thì in ra True, ngược lại in ra False
+# BÀI 4:Nhập vào một số nguyên a, nếu a chia hết cho 2 thì in ra True, ngược lại in ra False
 # a=int(input("nhập vào số nguyên a: "))
 # if a%2==0:
 #     print("TRUE")
 # else:
 #     print("FALSE")
-# bài 5:  Nhập vào số nguyên a, nếu a là số chia hết cho 3 và nằm trong khoảng từ 50 - 100 thì in ra True, ngược lại in ra False
+# BÀI 5:  Nhập vào số nguyên a, nếu a là số chia hết cho 3 và nằm trong khoảng từ 50 - 100 thì in ra True, ngược lại in ra False
 # cách 1:
 # a=int(input("nhập số nguyên a: "))
 # if a %3 == 0 and 50<= a <=100:
@@ -26,7 +27,7 @@
 # cách 2:
 # a=int(input("nhập vào số nguyên a: "))
 # print(a%3==0 and 50<=a<=100)
-# bài 6: Nhập vào số nguyên a, nếu a là số chia hết cho 5 nhưng KHÔNG nằm trong khoảng từ 20 - 70 thì in ra True, ngược lại in ra False
+# BÀI 6: Nhập vào số nguyên a, nếu a là số chia hết cho 5 nhưng KHÔNG nằm trong khoảng từ 20 - 70 thì in ra True, ngược lại in ra False
 # CÁCH 1: 
 # a=int(input("nhập vào số nguyên a: "))
 # if a%5==0 and not 20<=a<=70:
@@ -37,7 +38,7 @@
 # # CÁCH 2:
 # a=int(input("nhập vào số nguyên a: "))
 # print(a%5==0 and not 20<=a<=70)
-# bài 7: Nhập vào nguyên a và b, nếu 1 trong 2 số a và b chia hết cho 2 thì in ra True, ngược lại in ra False
+# BÀI 7: Nhập vào nguyên a và b, nếu 1 trong 2 số a và b chia hết cho 2 thì in ra True, ngược lại in ra False
 # a=int(input("nhập vào số nguyên a: "))
 # b=int(input("nhập vào số nguyên b: "))
 # print(a%2==0 or b%2==0 )
@@ -48,24 +49,24 @@
 #     print("TRUE")
 # else:
 #     print("FALSE")
-# bài 8: Nhập vào số thực a, kiểm tra xem a có phải là số nguyên hay không, nếu có thì in ra True, ngược lại in ra False
+# BÀI 8: Nhập vào số thực a, kiểm tra xem a có phải là số nguyên hay không, nếu có thì in ra True, ngược lại in ra False
 # a=float(input("nhập vào một số a: "))
 # b=round(a)
 # print(a==b )
-# bài 9:Nhập vào số nguyên a, kiểm tra xem a có phải là số chính phương hay không, nếu có thì in ra True, ngược lại in ra False
+# BÀI 9:Nhập vào số nguyên a, kiểm tra xem a có phải là số chính phương hay không, nếu có thì in ra True, ngược lại in ra False
 # a=int(input("nhập số nguyên a:  "))
 # cana=a**0.5
 # print(cana==round(cana))
-# bài 10:Nhập vào lương tháng này nhận được, ta phải đưa cho vợ 90% số tiền lương đó. Hãy in ra lương ta giữ lại
+# BÀI 10:Nhập vào lương tháng này nhận được, ta phải đưa cho vợ 90% số tiền lương đó. Hãy in ra lương ta giữ lại
 # a=int(input("nhập vào lương tháng này bạn nhận được: "))
 # print("lương giữ lại còn: ",a*0.1)
-# bài 10:Nhập vào 3 số a, b, c. In ra kết quả là tổng của ba số đó
+# BÀI 11:Nhập vào 3 số a, b, c. In ra kết quả là tổng của ba số đó
 # a=int(input("nhập vào số nguyên a: "))
 # b=int(input("nhập vào số nguyên b: "))
 # c=int(input("nhập vào số nguyên c: "))
 # tong=a+b+c
 # print("tổng ba số a,b,a là: ",tong)
-# bài 12: Nhập vào 3 số a, b, c. Tính và in ra d = (a + b)^c
+# BÀI 12: Nhập vào 3 số a, b, c. Tính và in ra d = (a + b)^c
 # Nếu d là số trong khoảng từ 100 - 200 thì in ra True, ngược lại in ra False
 # a=int(input("nhập vào số nguyên a: "))
 # b=int(input("nhập vào số nguyên b: "))
@@ -76,20 +77,21 @@
 #     print("TRUE")
 # else:
 #     print("FALSE")
-# bài 13:Nhập vào số nguyên dương a, nếu a lớn hơn 10 thì ta in ra đây là số lớn hơn 10
+# BÀI TẬP LỆNH ĐIỀU KIỆN CƠ BẢN
+# BÀI 13:Nhập vào số nguyên dương a, nếu a lớn hơn 10 thì ta in ra đây là số lớn hơn 10
 # a=int(input("nhập vào số nguyên a: "))
 # if a>10 :
 #     print("đây là số lớn hơn 10: ")
 # else:
 #     print("đây là số nhỏ hơn 10: ")
-# bài 14: Nhập vào số nguyên dương a, nếu a là số chẵn thì in ra đây là số chẵn, ngược lại in ra đây là số lẻ
+# BÀI 14: Nhập vào số nguyên dương a, nếu a là số chẵn thì in ra đây là số chẵn, ngược lại in ra đây là số lẻ
 # a=int(input("nhập vào số nguyên dương a: "))
 # print("số này đặc biệt: ")
 # if a%2==0:
 #     print("đây là số chẵn ")
 # else:
 #     print("đây là số lẻ: ")
-# bài 15 và 16 :))) :Nhập vào 3 số thực dương a, b, c. Kiểm tra xem a, b, c có cấu thành độ dài của 1 tam giác được không
+# BÀI 15 và 16 :))) :Nhập vào 3 số thực dương a, b, c. Kiểm tra xem a, b, c có cấu thành độ dài của 1 tam giác được không
 # a=int(input("nhập vào số nguyên a: "))
 # b=int(input("nhập vào số nguyên b: "))
 # c=int(input("nhập vào số nguyên c: "))
@@ -107,7 +109,7 @@
 #         print("đây là tam giác thường: ")
 # else:
 #     print("đây không cấu tạo thành tam giác: ")
-# bài 17: Nhập vào 3 số a, b, c. Hãy sắp xếp 3 số a, b, c theo thứ tự tăng dần rồi in ra lại
+# BÀI 17: Nhập vào 3 số a, b, c. Hãy sắp xếp 3 số a, b, c theo thứ tự tăng dần rồi in ra lại
 # a=int(input("nhập vào số nguyên a: "))
 # b=int(input("nhập vào số nguyên b: "))
 # c=int(input("nhập vào số nguyên c: "))
@@ -118,7 +120,7 @@
 # if b>c:
 #     b,c=c,b
 # print(a,b,c)
-#  bài 18: Giải và biện luận phương trình ax + b = 0
+# BÀI 18: Giải và biện luận phương trình ax + b = 0
 # a=int(input("nhập vào số nguyên a: "))
 # b=int(input("nhập vào số nguyên b: "))
 # print ("phương trình"+str(a)+"x+"+str(b)+"=0" )
@@ -129,7 +131,7 @@
 #         print("phương trình vô nghiệm: ")
 # else:
 #     print("nghiệm của phương trình là: ",-b/a)        
-# bài 19: Giải và biện luận phương trình ax^2 + bx + c = 0
+# BÀI 19: Giải và biện luận phương trình ax^2 + bx + c = 0
 # a=int(input("nhập vào số nguyên a: "))
 # b=int(input("nhập vào số nguyên b: "))
 # c=int(input("nhập vào số nguyên c: "))
@@ -153,7 +155,7 @@
 #         print("phương trình có nghiệm kép x1=x2:  ",-b/(a*a))
 #     else:
 #         print("phương trình vô nghiệm: ")
-# bài 20 :Nhập tháng, năm. Hãy cho biết tháng đó có bao nhiêu ngày
+# BÀI 20 :Nhập tháng, năm. Hãy cho biết tháng đó có bao nhiêu ngày
 # a=int(input("nhập vào tháng mà bạn muốn tìm: "))
 # b=int(input("nhập vào năm bạn muốn tìm:  "))
 # if a==1 or a==3 or a==5 or a==7 or a==8 or a==10 or a==12:
@@ -165,7 +167,8 @@
 #         print("tháng có 29 ngày: ")
 #     else:
 #         print("tháng có 28 ngày: ")
-# bài 21:Ngày vào ngày, tháng. Hãy tính và in ra xem ngày nhập vào cách ngày đầu năm bao nhiêu ngày (giả sư năm đó không phải là năm nhuận)
+# BÀI 21:Ngày vào ngày, tháng. Hãy tính và in ra xem ngày nhập vào cách ngày đầu năm bao nhiêu ngày 
+# (giả sư năm đó không phải là năm nhuận)
 # a=int(input("nhập vào ngày mà bạn muốn tìm: "))
 # b=int(input("nhập vào tháng bạn muốn tìm:  "))
 # if b<=8:
@@ -178,7 +181,7 @@
 # if b>2:
 #     songay-=2
 # print (songay)
-# bài 22: Nhập điểm toán, văn, anh.
+# BÀI 22: Nhập điểm toán, văn, anh.
 # Nếu điểm đúng quy tắc (trong khoảng từ 0 - 10), ta tính điểm trung bình rồi tiến hành xét:
 # Nếu điểm trung bình lớn hơn hoặc bằng 8, toán hoặc văn lớn hơn hoặc bằng 8 và không có điểm nào dưới 6.5 thì in ra “Học sinh giỏi”
 # Nếu không đủ điều kiện học sinh giỏi ta xét nếu điểm trung bình lớn hơn hoặc bằng 6.5, 
@@ -205,21 +208,22 @@
 #          print("học sinh kém: ")
 # else: 
 #     print("bạn đã nhập sai: ")
-# bài 23: In 10 lần chữ hello ra màn hình
+# BÀI TẬP VÒNG LẶP FOR
+# BÀI  23: In 10 lần chữ hello ra màn hình
 # for i in range (1,10+1):
 #     print("In 10 lần chữ hello ra màn hình")
-# bài 24: In các số lẻ dương bé hơn 100
+# BÀI  24: In các số lẻ dương bé hơn 100
 # for i in range(1,100,2):
 #     print(i)
-# bài 25:In các số chẵn chia hết cho 3 bé hơn 100
+# BÀI  25:In các số chẵn chia hết cho 3 bé hơn 100
 # for i in range(1,100,):
 #     if i%3==0 and i%2==0:
 #         print(i)
-# bài 26:Nhập vào số nguyên dương a, in ra bảng cửu chương của a
+# BÀI  26:Nhập vào số nguyên dương a, in ra bảng cửu chương của a
 # a=int(input("nhập vào số nguyên dương a để in ra bảng cửu chương a: "))
 # for i in range(1,10+1):
 #     print( a, "x" ,i, "=", a*i)
-# bài 27:Viết chương trình in ra hình tam giác có độ cao h được nhập từ bàn phím
+# BÀI  27:Viết chương trình in ra hình tam giác có độ cao h được nhập từ bàn phím
 # a=int(input("nhập vào độ cao h: "))
 # khoangtrangngoai= a-1
 # khoangtrangtrong=1
@@ -232,26 +236,26 @@
 #     else:
 #         print("*" * (a*2-1))
 #     khoangtrangngoai -= 1
-# bài 28: Nhập vào n
+# BÀI  28: Nhập vào n
 # Tính S = 1 + 2 + 3 + 4 + … + n
 # n=int(input("nhập vào số nguyên n: "))
 # s=0
 # for i in range (1,n+1):
 #     s+=i
 # print(s)
-# bài 29:Nhập vào số nguyên dương a, in toàn bộ ước của a
+# BÀI  29:Nhập vào số nguyên dương a, in toàn bộ ước của a
 # a=int(input("nhập vào a: "))
 # for i in range(1,a+1):
 #     if a%i==0:
 #         print(i)
-# bài 30: Nhập vào số nguyên dương a, đếm số ước của a
+# BÀI  30: Nhập vào số nguyên dương a, đếm số ước của a
 # a=int(input("nhập vào a: "))
 # dem=0
 # for i in range(1,a+1):
 #     if a%i==0:
 #         dem += 1
 # print(dem)
-#  bài 31:Nhập vào số nguyên dương a và b, in toàn bộ ước chung của a và b
+# BÀI  31:Nhập vào số nguyên dương a và b, in toàn bộ ước chung của a và b
 # a=int(input("nhập vào a: "))
 # b=int(input("nhập vào b: "))
 # for i in range (1,a+1):
@@ -259,7 +263,7 @@
 #         break
 #     if a%i==0 and b%i==0:
 #         print(i)
-# bài 32:Nhập vào số nguyên dương a và b, in ước chung lớn nhất của a và b
+# BÀI  32:Nhập vào số nguyên dương a và b, in ước chung lớn nhất của a và b
 # a=int(input("nhập vào a: "))
 # b=int(input("nhập vào b: "))
 # ucln=1
@@ -269,7 +273,7 @@
 #     if a%i==0 and b%i==0:
 #         ucln=i
 # print(ucln)
-# bài 33:Nhập vào số nguyên dương a, kiểm tra xem a có phải là số nguyên tố hay không
+# BÀI  33:Nhập vào số nguyên dương a, kiểm tra xem a có phải là số nguyên tố hay không
 # a=int(input("nhập số nguyên a: "))
 # if a>1 :
 #     dem=0
@@ -282,13 +286,14 @@
 #         print("không phải số nguyên tố: ")
 # else:
 #      print("không phải số nguyên tố: ")
-# bài 34: Nhập vào số nguyên dương a, nếu nhập số âm thì yêu cầu nhập lại cho đến khi người dùng nhập đúng số dương
+# BÀI TẬP VÒNG LẶP WHILE
+# BÀI  34: Nhập vào số nguyên dương a, nếu nhập số âm thì yêu cầu nhập lại cho đến khi người dùng nhập đúng số dương
 # Nếu người dùng nhập đúng số dương thì in ra “Bạn nhập đúng quy tắc”
 # a=int(input("nhập số nguyên a: "))
 # while a<=0:
 #     a=int(input("bạn nhập lại số nguyên: "))
 # print("bạn đã nhập đúng: ")
-# bài 35: Nhập n
+# BÀI  35: Nhập n
 # Cho S(k) = 1 + 2 + 3 + … + k
 # Tìm k sao cho S(k) lớn nhất nhưng nhỏ hơn n
 # a=int(input("nhập số nguyên a: "))
@@ -298,7 +303,7 @@
 #     s+=k
 #     k+=1
 # print(k-2)
-# bài 36:Nhập vào A, tìm n nhỏ nhất sao cho
+# BÀI  36:Nhập vào A, tìm n nhỏ nhất sao cho
 # 1 + 1/2 + 1/3 + 1/4 + ... + 1/n > A
 # a=float(input("nhập vào a: "))  # đây là số thực 
 # s=0
@@ -307,7 +312,7 @@
 #     s+=1/k
 #     k+=1
 # print(k-1)
-# bài 37:Nhập vào một dãy số nguyên, ngưng nhập khi người dùng nhập -1.
+# BÀI  37:Nhập vào một dãy số nguyên, ngưng nhập khi người dùng nhập -1.
 # Sau khi nhập xong, in số lớn nhất, số nhỏ nhất trong những số vừa nhập
 # a=int(input("nhập số nguyên a: "))
 # max= None
@@ -320,12 +325,12 @@
 #     a=int(input("nhập số nguyên a: "))
 # print("số lớn nhất là: ",max)
 # print("số nhỏ nhất là: ",min)
-# bài 38:Nhập vào số nguyên dương n, đếm xem n có bao nhiêu chữ số
+# BÀI  38:Nhập vào số nguyên dương n, đếm xem n có bao nhiêu chữ số
 # a=int(input("nhập số nguyên a: "))
 # a=str(a)
 # dem= len(a)
 # print("số này có",dem,"chữ số.")
-# bài 39:Nhập vào số nguyên dương n, đếm xem n có bao nhiêu chữ số chẵn, bao nhiêu chữ số lẻ
+# BÀI  39:Nhập vào số nguyên dương n, đếm xem n có bao nhiêu chữ số chẵn, bao nhiêu chữ số lẻ
 # s=int(input("nhập vào n: "))
 # demchan=demle=0
 # while s != 0:
@@ -337,7 +342,7 @@
 #         demle+=1
 # print("tổng chữ số chẵn là: ",demchan)
 # print("tổng chữ số lẻ là: ",demle)
-# bài 40:Nhập vào số nguyên dương n, tính tổng các chữ số của n
+# BÀI 40:Nhập vào số nguyên dương n, tính tổng các chữ số của n
 # s=int(input("nhập vào số bất kỳ: "))
 # a=0
 # while s!=0:
@@ -345,27 +350,27 @@
 #     s=s//10 
 #     a += n
 # print("tổng các chữ số bằng: ",a)
-# bài 41: Nhập vào một số nguyên dương n, kiểm tra xem n có phải là số dạng 2^k hay không
+# BÀI  41: Nhập vào một số nguyên dương n, kiểm tra xem n có phải là số dạng 2^k hay không
 # n=int(input("nhập số nguyên n: "))
 # n0=n
 # while n%2==0:
 #     n=n/2
-
 # if n==1:
 #     print(n0,"là số dạng 2^k: ")
 # else:
 #     print(n0,"không phải số dạng 2^k: ")
-# bài 43: Nhập vào một chuỗi, hãy đếm xem trong chuỗi có bao nhiêu từ (quy định là chuỗi không có ký tự đặc biệt,
+# BÀI  43: Nhập vào một chuỗi, hãy đếm xem trong chuỗi có bao nhiêu từ (quy định là chuỗi không có ký tự đặc biệt,
 # không số, không có dấu câu, chỉ có ký tự chữ và khoảng trắng)
 # a=input("nhập vào một chuỗi : ")
 # chuoi= a.count(" ")
 # print(chuoi+1)
-# bài 44: Nhập vào một chuỗi, hãy in từ đầu tiên trong chuỗi
+# BÀI TẬP XỬ LÝ CHUỖI
+# BÀI  44: Nhập vào một chuỗi, hãy in từ đầu tiên trong chuỗi
 # chuoi = input("nhập vào một chuỗi: ")
 # a = chuoi.find(" ")
 # tudautien = chuoi[:a]
 # print(tudautien)
-# bài 45: Nhập vào một chuỗi có dạng 3 số nguyên, mỗi số nguyên cách nhau một dấu phẩy, hãy tính tổng 3 số nguyên đó
+# BÀI 44 B: không in ra từ cuối cùng của chuỗi 
 # chuoi = input("Nhập vào một chuỗi: ")
 # a = chuoi. rfind(" ")
 # chuoi0 = chuoi[ :a]
@@ -374,5 +379,96 @@
 # chuoi_list = chuoi.split(" ")  # Tách chuỗi thành các từ
 # chuoi0 = " ".join(chuoi_list[:-1])  # Nối lại các từ trừ từ cuối cùng
 # print(chuoi0)
-# bài 46: Nhập vào một chuỗi, hãy đếm xem trong chuỗi có bao nhiêu ký tự in hoa, bao nhiêu ký tự in thường, bao nhiêu ký tự số
-
+# BÀI 45: Nhập vào một chuỗi có dạng 3 số nguyên, mỗi số nguyên cách nhau một dấu phẩy, hãy tính tổng 3 số nguyên đó
+# chuoi = input("nhập vào một chuỗi có ba số nguyên: ")
+# a = chuoi.find(",")
+# b = chuoi.rfind(",")
+# so1 = int(chuoi[:a])
+# so2 = int(chuoi[a+1:b])
+# so3 = int(chuoi[b+1])
+# print(so1 + so2 + so3)
+# BÀI 46: Nhập vào một chuỗi, hãy đếm xem trong chuỗi có bao nhiêu ký tự in hoa, bao nhiêu ký tự in thường, bao nhiêu ký tự số
+# chuoi = input("nhập vào một chuỗi: ")
+# demhoa = demthuong = demso = 0
+# for i in chuoi :
+#     if i.isupper():
+#         demhoa += 1
+#     elif i.islower():
+#         demthuong += 1
+#     elif i.isnumeric ():
+#         demso += 1 
+# print("số ký tự in hoa là: ",demhoa)   
+# print("số ký tự in thường là: ",demthuong)   
+# print("số ký tự số là: ",demso)   
+# BÀI 47:Nhập vào một chuỗi, hãy tách toàn bộ ký tự số trong chuỗi ra rồi tính tổng của chúng
+# VD:
+# Nhập chuỗi: abd45ecf47wde3s1
+# Tổng: 4 + 5 + 4 + 7 + 3 + 1 = 24
+# chuoi = input("nhập vào chuỗi: ")
+# tong = 0
+# for i in chuoi:
+#     if i.isnumeric():
+#         tong += int(i)
+# print(tong) 
+# BÀI 49:Nhập vào một chuỗi, hãy tách toàn bộ con số trong chuỗi ra rồi tính tổng của chúng
+# VD:
+# Nhập chuỗi: abd45ecf47wde3s1
+# Tổng: 45 + 47 + 3 + 1 = 96
+# chuoi = input("nhập vào một chuỗi: ")
+# chuoitam = ""
+# tong = 0
+# for i in chuoi :
+#     if i.isnumeric():
+#         chuoitam += i 
+#     else:
+#         if chuoitam != "":
+#             tong += int(chuoitam)
+#             chuoitam = ""
+# if chuoitam != "":
+#     tong += int(chuoitam)
+# print(tong)
+# BÀI 50: Nhập vào một chuỗi, kiểm tra chuỗi đó có phải là một chuỗi mật khẩu mạnh hay không 
+# (một chuỗi mật khẩu mạnh cần có ít nhất 1 ký tự đặc biệt, 1 ký tự in hoa, 1 con số, 1 chữ thường và độ dài phải lớn hơn 6)
+# chuoi = input ("nhập vào một chuỗi kiểm tra thử mật khẩu có mạnh hay không: ")
+# ktdodai = len(chuoi) > 6
+# ktdacbiet = ktinthuong = ktinhoa = ktso = False
+# for i in chuoi :
+#     if i.isnumeric():
+#         ktso = True
+#     elif i.isupper():
+#         ktinhoa = True
+#     elif i.islower():
+#         ktinthuong = True
+#     else:
+#         ktdacbiet = True
+# if ktdodai and ktso and ktinthuong and ktinhoa:
+#     print("đây là mật khẩu mạnh: ")
+# else:
+#     print("đây là mật khẩu yếu: ")
+# BÀI 51: Nhập vào một số nguyên, hãy chuyển số sang chuỗi, rồi đặt dấu chấm phân tách mỗi 3 chữ số (phân cách phần ngàn) rồi in ra màn hình
+# VD: Nhập số: 375469485
+# Đổi sang chuỗi rồi in ra: 375.469.485
+# a = int(input("nhập vào số nguyên: "))
+# a = str(a)
+# i = len(a) - 3      
+# while i > 0:
+#     a = a[:i] + "." + a[i:]
+#     i -= 3
+# print(a)
+# BÀI 52:Nhập vào chuỗi a và chuỗi b Hãy xóa chuỗi b trong chuỗi a rồi in lại chuỗi a ra màn hình (không dùng hàm replace)
+# Ví dụ: Chuỗi a: "Xin chào mọi người!"
+# Chuỗi b: "Xin chào"
+# Sau khi xóa, chuỗi a: " mọi người!"
+# a = input("nhập vào chuỗi a: ")
+# b = input("nhập vào chuỗi b: ")
+# vt_dau = 0
+# vt_cuoi = len(b)    
+# while vt_cuoi <= len(a):
+#     if a[vt_dau:vt_cuoi] == b:
+#        a = a[:vt_dau] + a[vt_cuoi:]
+#     else:
+#         vt_dau += 1
+#         vt_cuoi += 1
+# print(a)
+# BÀI TẬP XỬ LÝ LIST
+# bài 53:
