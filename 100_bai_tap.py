@@ -472,3 +472,7 @@
 # print(a)
 # BÀI TẬP XỬ LÝ LIST
 # bài 53:
+L = list(map(int, input("Nhập các số nguyên cách nhau bằng khoảng trắng: ").split()))
+gia_tri_lon_nhat = max(L)
+print("Giá trị lớn nhất trong danh sách là:", gia_tri_lon_nhat)
+
