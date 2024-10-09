@@ -470,4 +470,363 @@
 #         vt_dau += 1
 #         vt_cuoi += 1
 # print(a)
+
 # BÀI TẬP XỬ LÝ LIST
+
+# BÀI 53: Nhập vào list số nguyên
+# Nhập vào một list số nguyên L, tìm và in ra giá trị lớn nhất trong L
+# L = list(map(int, input("Nhập các số nguyên, cách nhau bởi khoảng trắng: ").split()))
+# # Tìm và in ra giá trị lớn nhất
+# max_value = max(L)
+# print("Giá trị lớn nhất trong list là:", max_value)
+# BÀI 54: Nhập vào một list số nguyên L, nhập vào 2 số nguyên dương a và b (a < b < len(L))
+# Tìm và in ra số nhỏ nhất trong list từ vị trí a đến vị trí b
+# Nhập vào list số nguyên
+# L = list(map(int, input("Nhập các số nguyên, cách nhau bởi khoảng trắng: ").split()))
+
+# # Nhập hai số nguyên dương a và b (a < b < len(L))
+# a = int(input("Nhập số nguyên a (a < b < len(L)): "))
+# b = int(input("Nhập số nguyên b (a < b < len(L)): "))
+
+# # Kiểm tra điều kiện a < b < len(L)
+# if 0 <= a < b < len(L):
+#     # Tìm giá trị nhỏ nhất trong đoạn từ vị trí a đến vị trí b
+#     min_value = min(L[a:b+1])
+#     print(f"Giá trị nhỏ nhất từ vị trí {a} đến vị trí {b} trong list là:", min_value)
+# else:
+#     print("Giá trị a và b không hợp lệ.")
+# # BÀI 55: Nhập vào một list số nguyên L, hãy kiểm tra xem tất cả các phần tử trong mảng có bằng nhau hay không, nếu có thì in True, không có thì in False
+# Nhập vào list số nguyên
+# BÀI 56: Nhập vào một list số nguyên L, tìm và in ra giá trị dương đầu tiên của list, nếu không có giá trị dương, ta in ra -1
+# Nhập vào list số nguyên
+# L = list(map(int, input("Nhập các số nguyên, cách nhau bởi khoảng trắng: ").split()))
+
+# # Tìm giá trị dương đầu tiên trong list
+# first_positive = -1  # Khởi tạo giá trị mặc định là -1
+# for num in L:
+#     if num > 0:
+#         first_positive = num
+#         break
+
+# # In ra giá trị dương đầu tiên hoặc -1 nếu không có
+# print(first_positive)
+
+# BÀI 57: Nhập vào một list L, hãy tìm và in ra giá trị âm lớn nhất trong L, nếu L không có giá trị âm thì ta in 0
+# Nhập vào list số nguyên
+# L = list(map(int, input("Nhập các số nguyên, cách nhau bởi khoảng trắng: ").split()))
+
+# # Lọc các giá trị âm trong list
+# negative_numbers = [num for num in L if num < 0]
+
+# # Tìm giá trị âm lớn nhất nếu có, nếu không thì in ra 0
+# if negative_numbers:
+#     max_negative = max(negative_numbers)
+#     print("Giá trị âm lớn nhất là:", max_negative)
+# else:
+#     print(0)
+
+# BÀI 58:Nhập vào một list số nguyên L, nhập vào số nguyên x, tìm giá trị trong list xa x nhất
+# Nhập vào list số nguyên
+# L = list(map(int, input("Nhập các số nguyên, cách nhau bởi khoảng trắng: ").split()))
+
+# # Nhập vào số nguyên x
+# x = int(input("Nhập số nguyên x: "))
+
+# # Tìm giá trị trong list xa x nhất
+# max_diff = -1  # Khởi tạo khoảng cách lớn nhất
+# result = None  # Giá trị xa x nhất
+
+# for num in L:
+#     diff = abs(num - x)  # Tính khoảng cách tuyệt đối giữa num và x
+#     if diff > max_diff:
+#         max_diff = diff
+#         result = num
+
+# # In ra giá trị xa x nhất
+# print("Giá trị xa x nhất là:", result)
+
+# # BÀI 59:Nhập vào một list số nguyên L, tính giá trị trung bình của list L
+# # # Nhập vào list số nguyên
+# L = list(map(int, input("Nhập các số nguyên, cách nhau bởi khoảng trắng: ").split()))
+
+# # Tính giá trị trung bình của list
+# if len(L) > 0:
+#     avg = sum(L) / len(L)
+#     print("Giá trị trung bình của list là:", avg)
+# else:
+#     print("List rỗng, không thể tính giá trị trung bình.")
+
+# BÀI 60: Nhập vào một list số nguyên L, hãy kiểm tra xem L có được sắp xếp từ bé đến lớn hay không, nếu có thì in True, không có thì in False
+# Nhập vào list số nguyên
+# L = list(map(int, input("Nhập các số nguyên, cách nhau bởi khoảng trắng: ").split()))
+
+# # Kiểm tra xem list có được sắp xếp từ bé đến lớn hay không
+# if L == sorted(L):
+#     print(True)
+# else:
+#     print(False)
+
+# BÀI 61 :Nhập vào một list số nguyên L, hãy sắp xếp list L theo thứ tự từ bé đến lớn
+# Nhập vào list số nguyên
+# L = list(map(int, input("Nhập các số nguyên, cách nhau bởi khoảng trắng: ").split()))
+
+# # Sắp xếp list theo thứ tự từ bé đến lớn
+# L.sort()
+
+# # In ra list đã được sắp xếp
+# print("List sau khi sắp xếp là:", L)
+
+# BÀI 62: Nhập vào một list số nguyên L, hãy kiểm tra xem L có phải là một cấp số cộng hay không? Nếu có thì tìm và in ra công sai, nếu không có thì in ra None
+# Nhập vào list số nguyên
+# L = list(map(int, input("Nhập các số nguyên, cách nhau bởi khoảng trắng: ").split()))
+
+# # Hàm kiểm tra cấp số cộng và tìm công sai
+# def is_arithmetic_sequence(seq):
+#     if len(seq) < 2:
+#         return None  # Không đủ phần tử để xác định
+
+#     common_difference = seq[1] - seq[0]  # Tính công sai ban đầu
+#     for i in range(2, len(seq)):
+#         if seq[i] - seq[i - 1] != common_difference:
+#             return None  # Không phải cấp số cộng
+
+#     return common_difference  # Trả về công sai nếu là cấp số cộng
+
+# # Kiểm tra và in ra kết quả
+# common_difference = is_arithmetic_sequence(L)
+# if common_difference is not None:
+#     print("List là một cấp số cộng với công sai:", common_difference)
+# else:
+#     print(None)
+
+# BÀI 63: Nhập vào một list số nguyên L, Hãy tìm và in ra một vị trí trong L thỏa hai điều kiện: có hai giá trị lân cận và giá trị tại vị trí đó bằng tích hai giá trị lân cận.
+# Nếu L không tồn tại giá trị như vậy thì in ra - 1
+# Nhập vào list số nguyên
+# L = list(map(int, input("Nhập các số nguyên, cách nhau bởi khoảng trắng: ").split()))
+
+# # Biến để lưu vị trí tìm thấy
+# position = -1
+
+# # Duyệt qua list từ phần tử thứ 1 đến phần tử thứ len(L) - 2
+# for i in range(1, len(L) - 1):
+#     if L[i] == L[i - 1] * L[i + 1]:
+#         position = i
+#         break  # Ngắt vòng lặp khi tìm thấy
+
+# # In ra vị trí thỏa mãn điều kiện hoặc -1 nếu không tìm thấy
+# print(position)
+
+# BÀI 64:Người ta định nghĩa một list số nguyên là list chẵn lẻ, nếu như tổng 2 phần tử bất kỳ bên trong list đều là số lẻ
+# Nhập vào một list số nguyên L và kiểm tra xem L có phải là list chẵn lẻ hay không
+# Nhập vào list số nguyên
+# L = list(map(int, input("Nhập các số nguyên, cách nhau bởi khoảng trắng: ").split()))
+
+# # Kiểm tra xem list có phải là list chẵn lẻ hay không
+# def is_odd_list(seq):
+#     for num in seq:
+#         if num % 2 == 0:  # Kiểm tra xem số có phải là số chẵn không
+#             return False  # Nếu có số chẵn thì không phải list chẵn lẻ
+#     return True  # Nếu tất cả số đều lẻ
+
+# # Gọi hàm kiểm tra và in ra kết quả
+# if is_odd_list(L):
+#     print("List là list chẵn lẻ.")
+# else:
+#     print("List không phải là list chẵn lẻ.")
+
+# BÀI 65:Người ta định nghĩa một list số nguyên được gọi là “dạng sóng” khi tất cả các phần tử đều lớn hơn hoặc nhỏ hơn hai phần tử xung quanh nó.
+# Nhập vào một list số nguyên L và kiểm tra xem L có phải là list “dạng sóng” hay không, nếu có thì ta in ra True, không có thì ta in False
+# Nhập vào list số nguyên
+# L = list(map(int, input("Nhập các số nguyên, cách nhau bởi khoảng trắng: ").split()))
+
+# # Hàm kiểm tra list có phải là dạng sóng hay không
+# def is_wave_form(seq):
+#     for i in range(1, len(seq) - 1):
+#         # Kiểm tra điều kiện dạng sóng
+#         if not ((seq[i] > seq[i - 1] and seq[i] > seq[i + 1]) or (seq[i] < seq[i - 1] and seq[i] < seq[i + 1])):
+#             return False  # Nếu không thỏa mãn điều kiện, trả về False
+#     return True  # Nếu tất cả các phần tử đều thỏa mãn điều kiện
+
+# # Kiểm tra và in ra kết quả
+# if is_wave_form(L):
+#     print(True)
+# else:
+#     print(False)
+
+# BÀI 66 : Nhập vào một list số nguyên L, hãy đếm số lượng giá trị trong list thỏa tính chất: “lớn hơn tất cả các giá trị đứng đằng trước nó”
+# Nhập vào list số nguyên
+# L = list(map(int, input("Nhập các số nguyên, cách nhau bởi khoảng trắng: ").split()))
+
+# # Biến để đếm số lượng giá trị thỏa mãn
+# count = 0
+
+# # Biến để lưu giá trị lớn nhất đã gặp trước đó
+# max_value = float('-inf')  # Khởi tạo là âm vô cực
+
+# # Duyệt qua từng phần tử trong list
+# for num in L:
+#     if num > max_value:
+#         count += 1  # Tăng số lượng nếu num lớn hơn giá trị lớn nhất trước đó
+#         max_value = num  # Cập nhật giá trị lớn nhất
+
+# # In ra kết quả
+# print("Số lượng giá trị thỏa tính chất là:", count)
+
+# BÀI 67: Nhập vào một list số nguyên L, hãy đưa các số chẵn trong list về đầu list, số lẻ về cuối list và các phần tử 0 nằm ở giữa
+# Nhập vào list số nguyên
+# L = list(map(int, input("Nhập các số nguyên, cách nhau bởi khoảng trắng: ").split()))
+
+# # Khởi tạo các list tạm thời
+# evens = []  # Danh sách số chẵn
+# odds = []   # Danh sách số lẻ
+# zeros = []  # Danh sách số 0
+
+# # Duyệt qua từng phần tử trong list
+# for num in L:
+#     if num == 0:
+#         zeros.append(num)  # Thêm số 0 vào danh sách zeros
+#     elif num % 2 == 0:
+#         evens.append(num)  # Thêm số chẵn vào danh sách evens
+#     else:
+#         odds.append(num)    # Thêm số lẻ vào danh sách odds
+
+# # Kết hợp các list lại với nhau
+# result = evens + zeros + odds
+
+# # In ra kết quả
+# print("List sau khi sắp xếp là:", result)
+
+# BÀI 68 : Nhập vào một list số nguyên L, hãy biến đổi L bằng cách thay đổi vị trí giữa giá trị nhỏ nhất và lớn nhất
+# Nhập vào list số nguyên
+# L = list(map(int, input("Nhập các số nguyên, cách nhau bởi khoảng trắng: ").split()))
+
+# # Kiểm tra list không rỗng
+# if not L:
+#     print("List rỗng!")
+# else:
+#     # Tìm chỉ số của giá trị nhỏ nhất và lớn nhất
+#     min_index = L.index(min(L))
+#     max_index = L.index(max(L))
+
+#     # Hoán đổi giá trị nhỏ nhất và lớn nhất
+#     L[min_index], L[max_index] = L[max_index], L[min_index]
+
+#     # In ra list đã biến đổi
+#     print("List sau khi hoán đổi:", L)
+
+# BÀI 69 :Nhập vào một list L có các phần tử bao gồm chuỗi và số nguyên, hãy tìm và in ra chuỗi có độ dài lớn nhất và số nguyên có giá trị nhỏ nhất
+# Nhập vào list có các phần tử bao gồm chuỗi và số nguyên
+# L = eval(input("Nhập list gồm các phần tử chuỗi và số nguyên (vd: [1, 'abc', 2, 'de', -1]): "))
+
+# # Biến để lưu chuỗi có độ dài lớn nhất và số nguyên nhỏ nhất
+# longest_string = ""
+# smallest_integer = float('inf')  # Khởi tạo là dương vô cực
+
+# # Duyệt qua từng phần tử trong list
+# for item in L:
+#     # Kiểm tra nếu phần tử là chuỗi
+#     if isinstance(item, str):
+#         if len(item) > len(longest_string):
+#             longest_string = item  # Cập nhật chuỗi có độ dài lớn nhất
+#     # Kiểm tra nếu phần tử là số nguyên
+#     elif isinstance(item, int):
+#         if item < smallest_integer:
+#             smallest_integer = item  # Cập nhật số nguyên nhỏ nhất
+
+# # In ra kết quả
+# print("Chuỗi có độ dài lớn nhất:", longest_string)
+# print("Số nguyên có giá trị nhỏ nhất:", smallest_integer if smallest_integer != float('inf') else "Không có số nguyên")
+
+# BÀI 70 : Nhập vào một list L có các phần tử bao gồm chuỗi và số nguyên, hãy kiểm tra các phần tử trong L có phải là chuỗi và số xen kẽ nhau không, nếu có thì ta tiến hành tạo một list K mới có các phần tử như sau:
+# K[i/2] = L[i]*L[i+1] (với i chẵn)
+# Nhập vào list có các phần tử bao gồm chuỗi và số nguyên
+# L = eval(input("Nhập list gồm các phần tử chuỗi và số nguyên (vd: [1, 'abc', 2, 'de', 3]): "))
+
+# # Biến để lưu list mới K
+# K = []
+
+# # Kiểm tra tính xen kẽ
+# is_alternating = True
+# for i in range(len(L)):
+#     if (i % 2 == 0 and not isinstance(L[i], str)) or (i % 2 == 1 and not isinstance(L[i], int)):
+#         is_alternating = False
+#         break
+
+# # Nếu là xen kẽ, tạo list K
+# if is_alternating:
+#     for i in range(0, len(L) - 1, 2):  # Duyệt từ 0 đến len(L) - 1 với bước 2
+#         # Kiểm tra nếu phần tử i là chuỗi và phần tử i+1 là số nguyên
+#         if isinstance(L[i], str) and isinstance(L[i + 1], int):
+#             K.append(L[i] * L[i + 1])  # Tạo phần tử K[i/2] = L[i] * L[i+1]
+
+#     # In ra kết quả
+#     print("List K mới là:", K)
+# else:
+#     print("Các phần tử trong list không phải là chuỗi và số xen kẽ nhau.")
+
+# BÀI 71 : Nhập vào một list L có các phần tử là chuỗi (các chuỗi này không có ký tự đặc biệt, dấu câu, ký tự số, chỉ có ký tự chữ cái và khoảng trắng)
+# Hãy tìm ra vị trí của chuỗi có nhiều từ nhất
+# Nhập vào list các chuỗi
+# L = eval(input("Nhập list gồm các chuỗi (vd: ['Hello world', 'Python is fun', 'I love programming']): "))
+
+# # Biến để lưu vị trí và số từ nhiều nhất
+# max_words = 0
+# max_index = -1
+
+# # Duyệt qua từng chuỗi trong list
+# for index, string in enumerate(L):
+#     word_count = len(string.split())  # Đếm số từ trong chuỗi
+
+#     # Kiểm tra nếu số từ trong chuỗi hiện tại lớn hơn số từ lớn nhất đã tìm thấy
+#     if word_count > max_words:
+#         max_words = word_count
+#         max_index = index  # Cập nhật vị trí
+
+# # In ra kết quả
+# if max_index != -1:
+#     print("Vị trí của chuỗi có nhiều từ nhất là:", max_index)
+#     print("Chuỗi đó là:", L[max_index])
+# else:
+#     print("Không có chuỗi nào trong list.")
+
+# BÀI 72: Nhập vào một list L có các phần tử là chuỗi. Hãy tìm ra chuỗi có vị trí ký tự in hoa lớn nhất
+# Nhập vào list các chuỗi
+# L = eval(input("Nhập list gồm các chuỗi (vd: ['Hello World', 'Python Is Fun', 'Learning Python']): "))
+
+# # Biến để lưu chuỗi có ký tự in hoa ở vị trí lớn nhất và chỉ số của nó
+# max_upper_index = -1
+# result_string = ""
+
+# # Duyệt qua từng chuỗi trong list
+# for string in L:
+#     # Duyệt qua từng ký tự trong chuỗi
+#     for index, char in enumerate(string):
+#         if char.isupper():  # Kiểm tra nếu ký tự là in hoa
+#             if index > max_upper_index:  # Kiểm tra vị trí ký tự in hoa
+#                 max_upper_index = index
+#                 result_string = string  # Cập nhật chuỗi có vị trí ký tự in hoa lớn nhất
+
+# # In ra kết quả
+# if result_string:
+#     print("Chuỗi có ký tự in hoa ở vị trí lớn nhất là:", result_string)
+# else:
+#     print("Không có ký tự in hoa trong bất kỳ chuỗi nào.")
+
+# BÀI TẬP XÂY DỰNG HÀM
+
+# BÀI 73: Viết hàm đưa vào 2 số nguyên, số nào lớn hơn thì in bảng cửu chương của số đó
+# def print_multiplication_table(a, b):
+#     # Tìm số lớn hơn
+#     larger = max(a, b)
+
+#     # In bảng cửu chương của số lớn hơn
+#     print(f"Bảng cửu chương của {larger}:")
+#     for i in range(1, 11):  # Từ 1 đến 10
+#         print(f"{larger} x {i} = {larger * i}")
+
+# # Nhập vào hai số nguyên
+# num1 = int(input("Nhập số nguyên thứ nhất: "))
+# num2 = int(input("Nhập số nguyên thứ hai: "))
+
+# # Gọi hàm để in bảng cửu chương
+# print_multiplication_table(num1, num2)
