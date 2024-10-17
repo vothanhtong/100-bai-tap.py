@@ -20,4 +20,3 @@ for item in L:
 # In ra kết quả
 print("Chuỗi có độ dài lớn nhất:", longest_string)
 print("Số nguyên có giá trị nhỏ nhất:", smallest_integer if smallest_integer != float('inf') else "Không có số nguyên")
-S
