@@ -970,3 +970,38 @@ print(gia_tri_lon_thu_a(L, a))  # Kết quả sẽ là 4
 # BÀI TẬP XỬ LÝ DICTIONARY
 
 # Bài 82: Viết hàm đưa vào 1 dictionary có các phần tử có giá trị là số nguyên, tìm và trả về key có giá trị lớn nhất
+def key_max_value(d):
+    if not d:
+        return None  # Trả về None nếu dictionary rỗng
+
+    # Tìm key có giá trị lớn nhất
+    max_key = max(d, key=d.get)  # Sử dụng hàm max với tham số key để tìm key tương ứng
+    return max_key
+
+# Ví dụ sử dụng
+d = {'a': 10, 'b': 20, 'c': 15}
+result = key_max_value(d)
+print(result)  # Kết quả sẽ là 'b'
+
+# Bài 83: Viết hàm đưa vào 1 dictionary có các phần tử có key là chuỗi, tìm và trả về giá trị của key có độ dài lớn nhất
+def key_max_value(d):
+    if not d:
+        return None  # Trả về None nếu dictionary rỗng
+
+    # Tìm key có giá trị lớn nhất
+    max_key = max(d, key=d.get)  # Sử dụng hàm max với tham số key để tìm key tương ứng
+    return max_key
+
+# Ví dụ sử dụng
+d = {'a': 10, 'b': 20, 'c': 15}
+result = key_max_value(d)
+print(result)  # Kết quả sẽ là 'b'
+
+# Bài 84 :Viết hàm có tham số đầu vào là một list L có các phần tử là chuỗi. Hãy tạo ra một dictionary D mã hóa, với mỗi một phần tử trong L được mã hóa thành một con số (theo thứ tự từ 0 tăng dần lên 1 đơn vị). Sau đó trả về list đã được mã hóa
+# Ví dụ:
+# Cho
+# L = ["đen","vàng","xanh","vàng","xanh","đỏ","hồng"]
+# Xây dựng dictionary mã hóa:
+# D = {'đen':0,'vàng':1,'xanh':2,'đỏ':3,'hồng':4}
+# Trả về List mã hóa:
+# L_mahoa = [0, 1, 2, 1, 2, 3, 4]
