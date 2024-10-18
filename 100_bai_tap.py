@@ -929,7 +929,7 @@
 #                 break
     
 #     return primes  # Trả về danh sách các số nguyên tố
-# Bài 80:Viết hàm đưa vào 1 list số nguyên L và 1 số nguyên dương a.
+# Bài 81:Viết hàm đưa vào 1 list số nguyên L và 1 số nguyên dương a.
 #  Hãy tìm và trả về giá trị lớn thứ a trong list L (nếu a = 1 thì tìm giá trị lớn nhất, a = 2 thì tìm giá trị lớn nhì, a = 3 thì tìm giá trị lớn ba,...)
 # C1 
 def gia_tri_lon_thu_a(L, a):
@@ -967,3 +967,6 @@ L = [3, 1, 4, 4, 5, 5, 2]
 a = 2
 print(gia_tri_lon_thu_a(L, a))  # Kết quả sẽ là 4
 
+# BÀI TẬP XỬ LÝ DICTIONARY
+
+# Bài 82: Viết hàm đưa vào 1 dictionary có các phần tử có giá trị là số nguyên, tìm và trả về key có giá trị lớn nhất
