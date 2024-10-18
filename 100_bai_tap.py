@@ -1005,3 +1005,42 @@ print(result)  # Kết quả sẽ là 'b'
 # D = {'đen':0,'vàng':1,'xanh':2,'đỏ':3,'hồng':4}
 # Trả về List mã hóa:
 # L_mahoa = [0, 1, 2, 1, 2, 3, 4]
+def ma_hoa_list(L):
+    D = {}  # Tạo dictionary mã hóa
+    L_mahoa = []  # Danh sách mã hóa
+
+    # Bước 1: Tạo dictionary mã hóa
+    for item in L:
+        if item not in D:
+            D[item] = len(D)  # Gán mã cho phần tử mới
+        L_mahoa.append(D[item])  # Thêm giá trị mã hóa vào danh sách kết quả
+
+    return L_mahoa, D  # Trả về danh sách mã hóa và dictionary
+
+# Ví dụ sử dụng
+L = ["đen", "vàng", "xanh", "vàng", "xanh", "đỏ", "hồng"]
+L_mahoa, D = ma_hoa_list(L)
+print("List mã hóa:", L_mahoa)  # Kết quả sẽ là [0, 1, 2, 1, 2, 3, 4]
+print("Dictionary mã hóa:", D)   # Kết quả sẽ là {'đen': 0, 'vàng': 1, 'xanh': 2, 'đỏ': 3, 'hồng': 4}
+
+# Bài 85:Viết hàm có tham số đầu vào là một dictionary, hãy tạo một dictionary mới hoán đổi giá trị và key của dictionary đầu vào, rồi trả về dicionary mới đó.
+#  Nếu sau khi hoán đổi có 2 key trùng nhau (do dictionary đầu vào có 2 giá trị trùng nhau), hàm trả về None
+def hoan_doi_dict(d):
+    d_hoan_doi = {}  # Tạo dictionary mới để hoán đổi
+
+    for key, value in d.items():
+        # Kiểm tra xem value đã tồn tại trong dictionary mới chưa
+        if value in d_hoan_doi:
+            return None  # Nếu trùng, trả về None
+        d_hoan_doi[value] = key  # Hoán đổi key và value
+
+    return d_hoan_doi  # Trả về dictionary mới
+
+# Ví dụ sử dụng
+d = {'a': 1, 'b': 2, 'c': 3}
+d_hoan_doi = hoan_doi_dict(d)
+print(d_hoan_doi)  # Kết quả sẽ là {1: 'a', 2: 'b', 3: 'c'}
+
+d2 = {'a': 1, 'b': 2, 'c': 1}
+d_hoan_doi2 = hoan_doi_dict(d2)
+print(d_hoan_doi2)  # Kết quả sẽ là None (do có giá trị trùng nhau)
