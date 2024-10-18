@@ -832,100 +832,138 @@
 # print_multiplication_table(num1, num2)
 
 # BÀI 74: Viết hàm đưa vào 1 số nguyên a, kiểm tra xem a có phải là số nguyên tố hay không
-def is_prime(a):
-    # Số nhỏ hơn 2 không phải là số nguyên tố
-    if a < 2:
-        return False
-    # Kiểm tra các số từ 2 đến căn bậc hai của a
-    for i in range(2, int(a ** 0.5) + 1):
-        if a % i == 0:
-            return False
-    return True
+# def is_prime(a):
+#     # Số nhỏ hơn 2 không phải là số nguyên tố
+#     if a < 2:
+#         return False
+#     # Kiểm tra các số từ 2 đến căn bậc hai của a
+#     for i in range(2, int(a ** 0.5) + 1):
+#         if a % i == 0:
+#             return False
+#     return True
 
-# BÀI 75 :Viết hàm đưa vào 1 số nguyên a, kiểm tra xem a có phải là số Armstrong hay không
-def is_armstrong(a):
-    # Chuyển số thành chuỗi để dễ dàng đếm số chữ số và truy cập từng chữ số
-    digits = str(a)
-    n = len(digits)
+# # BÀI 75 :Viết hàm đưa vào 1 số nguyên a, kiểm tra xem a có phải là số Armstrong hay không
+# def is_armstrong(a):
+#     # Chuyển số thành chuỗi để dễ dàng đếm số chữ số và truy cập từng chữ số
+#     digits = str(a)
+#     n = len(digits)
     
-    # Tính tổng các lũy thừa của từng chữ số lên mũ số lượng chữ số
-    sum_of_powers = sum(int(digit) ** n for digit in digits)
+#     # Tính tổng các lũy thừa của từng chữ số lên mũ số lượng chữ số
+#     sum_of_powers = sum(int(digit) ** n for digit in digits)
     
-    # Kiểm tra xem tổng có bằng số ban đầu hay không
-    return sum_of_powers == a
+#     # Kiểm tra xem tổng có bằng số ban đầu hay không
+#     return sum_of_powers == a
 
-# BÀI 76: Viết hàm đưa vào 1 list số nguyên, tìm và trả về vị trí có giá trị lớn nhất trong list
+# # BÀI 76: Viết hàm đưa vào 1 list số nguyên, tìm và trả về vị trí có giá trị lớn nhất trong list
 
-def find_max_index(lst):
-    if len(lst) == 0:
-        return None  # Trả về None nếu danh sách rỗng
+# def find_max_index(lst):
+#     if len(lst) == 0:
+#         return None  # Trả về None nếu danh sách rỗng
 
-    max_value = lst[0]
-    max_index = 0
+#     max_value = lst[0]
+#     max_index = 0
 
-    # Duyệt qua danh sách, bắt đầu từ vị trí thứ 1
-    for i in range(1, len(lst)):
-        if lst[i] > max_value:
-            max_value = lst[i]
-            max_index = i
+#     # Duyệt qua danh sách, bắt đầu từ vị trí thứ 1
+#     for i in range(1, len(lst)):
+#         if lst[i] > max_value:
+#             max_value = lst[i]
+#             max_index = i
 
-    return max_index
+#     return max_index
 
-# BÀi 77: Viết hàm đưa vào một list số nguyên và một số nguyên dương k.
-#  Hãy tìm và trả về vị trí của phần tử đầu tiên có giá trị k trong list số nguyên, nếu không có thì trả về -1
-def find_first_occurrence(lst, k):
-    # Duyệt qua danh sách
-    for index in range(len(lst)):
-        if lst[index] == k:
-            return index  # Trả về vị trí đầu tiên tìm thấy
-    return -1  # Trả về -1 nếu không tìm thấy
+# # BÀi 77: Viết hàm đưa vào một list số nguyên và một số nguyên dương k.
+# #  Hãy tìm và trả về vị trí của phần tử đầu tiên có giá trị k trong list số nguyên, nếu không có thì trả về -1
+# def find_first_occurrence(lst, k):
+#     # Duyệt qua danh sách
+#     for index in range(len(lst)):
+#         if lst[index] == k:
+#             return index  # Trả về vị trí đầu tiên tìm thấy
+#     return -1  # Trả về -1 nếu không tìm thấy
 
-# BÀI 78 :Viết hàm đưa vào 1 list có các phần tử là chuỗi, tìm và trả về chuỗi ngắn nhất trong list
-def find_shortest_string(lst):
-    if len(lst) == 0:
-        return None  # Trả về None nếu danh sách rỗng
+# # BÀI 78 :Viết hàm đưa vào 1 list có các phần tử là chuỗi, tìm và trả về chuỗi ngắn nhất trong list
+# def find_shortest_string(lst):
+#     if len(lst) == 0:
+#         return None  # Trả về None nếu danh sách rỗng
 
-    shortest_string = lst[0]  # Bắt đầu với chuỗi đầu tiên
+#     shortest_string = lst[0]  # Bắt đầu với chuỗi đầu tiên
 
-    # Duyệt qua danh sách để tìm chuỗi ngắn nhất
-    for string in lst:
-        if len(string) < len(shortest_string):
-            shortest_string = string  # Cập nhật chuỗi ngắn nhất
+#     # Duyệt qua danh sách để tìm chuỗi ngắn nhất
+#     for string in lst:
+#         if len(string) < len(shortest_string):
+#             shortest_string = string  # Cập nhật chuỗi ngắn nhất
 
-    return shortest_string
+#     return shortest_string
 
-# BÀI 79 :Viết hàm đưa vào 1 list số nguyên L và 1 số nguyên dương a. Hãy tính và trả về giá trị trung bình của a phần tử đầu tiên trong L
-def average_of_first_a_elements(L, a):
-    # Kiểm tra nếu a lớn hơn số phần tử trong L
-    if a > len(L):
-        return None  # Trả về None nếu a lớn hơn số phần tử trong L
+# # BÀI 79 :Viết hàm đưa vào 1 list số nguyên L và 1 số nguyên dương a. Hãy tính và trả về giá trị trung bình của a phần tử đầu tiên trong L
+# def average_of_first_a_elements(L, a):
+#     # Kiểm tra nếu a lớn hơn số phần tử trong L
+#     if a > len(L):
+#         return None  # Trả về None nếu a lớn hơn số phần tử trong L
     
-    # Lấy a phần tử đầu tiên
-    first_a_elements = L[:a]
+#     # Lấy a phần tử đầu tiên
+#     first_a_elements = L[:a]
     
-    # Tính trung bình
-    average = sum(first_a_elements) / a
-    return average
+#     # Tính trung bình
+#     average = sum(first_a_elements) / a
+#     return average
 
-# BÀI 80: Viết hàm đưa vào 1 list số nguyên L và 1 số nguyên dương a.
-#  Hãy tìm và trả về một list mới có số phần tử là a, giá trị các phần tử là các số nguyên tố tìm được trong list L
-def is_prime(n):
-    """Kiểm tra xem n có phải là số nguyên tố hay không."""
-    if n < 2:
-        return False
-    for i in range(2, int(n ** 0.5) + 1):
-        if n % i == 0:
-            return False
-    return True
+# # BÀI 80: Viết hàm đưa vào 1 list số nguyên L và 1 số nguyên dương a.
+# #  Hãy tìm và trả về một list mới có số phần tử là a, giá trị các phần tử là các số nguyên tố tìm được trong list L
+# def is_prime(n):
+#     """Kiểm tra xem n có phải là số nguyên tố hay không."""
+#     if n < 2:
+#         return False
+#     for i in range(2, int(n ** 0.5) + 1):
+#         if n % i == 0:
+#             return False
+#     return True
 
-def get_first_a_primes(L, a):
-    primes = []  # Danh sách chứa số nguyên tố tìm được
+# def get_first_a_primes(L, a):
+#     primes = []  # Danh sách chứa số nguyên tố tìm được
     
-    # Duyệt qua từng phần tử trong L
-    for number in L:
-        if is_prime(number):
-            primes.append(number)  # Thêm số nguyên tố vào danh sách
-            if len(primes) == a:  # Kiểm tra xem đã đủ a phần tử chưa
-                break
+#     # Duyệt qua từng phần tử trong L
+#     for number in L:
+#         if is_prime(number):
+#             primes.append(number)  # Thêm số nguyên tố vào danh sách
+#             if len(primes) == a:  # Kiểm tra xem đã đủ a phần tử chưa
+#                 break
     
-    return primes  # Trả về danh sách các số nguyên tố
+#     return primes  # Trả về danh sách các số nguyên tố
+# Bài 80:Viết hàm đưa vào 1 list số nguyên L và 1 số nguyên dương a.
+#  Hãy tìm và trả về giá trị lớn thứ a trong list L (nếu a = 1 thì tìm giá trị lớn nhất, a = 2 thì tìm giá trị lớn nhì, a = 3 thì tìm giá trị lớn ba,...)
+# C1 
+def gia_tri_lon_thu_a(L, a):
+    # Bước 1: Sắp xếp danh sách theo thứ tự giảm dần
+    L_unique = list(set(L))  # Loại bỏ các giá trị trùng lặp
+    L_unique.sort(reverse=True)  # Sắp xếp giảm dần
+
+    # Bước 2: Kiểm tra xem giá trị thứ a có tồn tại không
+    if a <= len(L_unique):
+        return L_unique[a - 1]  # Trả về giá trị lớn thứ a (a-1 là chỉ số)
+    else:
+        return None  # Trả về None nếu a lớn hơn số phần tử độc nhất trong L
+
+# Ví dụ sử dụng
+L = [3, 1, 4, 4, 2, 5]
+a = 2
+result = gia_tri_lon_thu_a(L, a)
+print(result)  # Kết quả sẽ là 4
+# c2:
+def gia_tri_lon_thu_a(L, a):
+    # Loại bỏ các số trùng lặp bằng cách chuyển sang tập hợp
+    unique_values = list(set(L))
+    
+    # Sắp xếp danh sách theo thứ tự giảm dần
+    unique_values.sort(reverse=True)
+    
+    # Kiểm tra xem a có nằm trong phạm vi số phần tử không
+    if a <= len(unique_values):
+        return unique_values[a - 1]  # Trả về giá trị lớn thứ a
+    else:
+        return None  # Trả về None nếu không có giá trị lớn thứ a
+
+# Ví dụ sử dụng
+L = [3, 1, 4, 4, 5, 5, 2]
+a = 2
+print(gia_tri_lon_thu_a(L, a))  # Kết quả sẽ là 4
+
