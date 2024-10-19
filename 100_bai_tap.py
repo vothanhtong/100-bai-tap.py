@@ -1353,4 +1353,145 @@ def xu_ly_file(input_file, output_file):
 # Sử dụng hàm với file thuaso.inp và thuaso.out
 xu_ly_file('thuaso.inp', 'thuaso.out')
 
-# Bài 94: 
+# Bài 94: Cho một chuỗi ký tự S (gồm chữ và số). Hãy viết chương trình tách chữ và số thành hai chuỗi riêng biệt.
+# File chuoi.inp chứa duy nhất 1 chuỗi S
+
+# Hãy tách và ghi vào file chuoi.out 2 dòng, dòng thứ nhất ghi chuỗi ký tự chữ, dòng thứ hai ghi chuỗi ký tự số.
+
+# Nếu như chuỗi nào rỗng thì ghi dấu trừ ‘-’.
+# VD1:
+# chuoi.inp	chuoi.out
+# a1B2c34d	aBcd
+# 1234
+# VD2:
+# chuoi.inp	chuoi.out
+# abghcGGG	abghcGGG
+def tach_chu_so(input_file, output_file):
+    with open(input_file, 'r') as inp, open(output_file, 'w') as out:
+        chuoi = inp.read().strip()  # Đọc chuỗi S từ file và loại bỏ ký tự trắng thừa
+        
+        chuoi_chu = ""
+        chuoi_so = ""
+
+        # Duyệt qua từng ký tự trong chuỗi
+        for ky_tu in chuoi:
+            if ky_tu.isalpha():  # Nếu là chữ cái
+                chuoi_chu += ky_tu
+            elif ky_tu.isdigit():  # Nếu là chữ số
+                chuoi_so += ky_tu
+
+        # Nếu chuỗi nào rỗng, thay bằng dấu '-'
+        if not chuoi_chu:
+            chuoi_chu = "-"
+        if not chuoi_so:
+            chuoi_so = "-"
+        
+        # Ghi kết quả vào file, mỗi chuỗi trên một dòng
+        out.write(chuoi_chu + "\n")
+        out.write(chuoi_so + "\n")
+
+# Sử dụng hàm với file cụ thể
+tach_chu_so('chuoi.inp', 'chuoi.out')
+
+# Bài 95:Cho một dãy số 1, 1, 1, 2, 3, 4, 6,... (quy luật a[i] = a[i - 1] + a[i - 3])
+# Với a[1] = 1, a[2] = 1, a[3] = 1 (3 số đầu tiên)
+# File dayso.inp chứa các số nguyên k (k < 1000), mỗi dòng 1 số
+# Hãy tìm a[k] trong dãy số và ghi vào file dayso.out
+# VD:
+# dayso.inp	
+# dayso.out
+# 3
+# 10
+# 50
+# 101	1
+# 19
+# 83316385
+# 24382819596721629
+def tinh_day_so(max_k):
+    # Khởi tạo dãy với 3 phần tử đầu là 1
+    a = [0] * (max_k + 1)
+    a[1] = a[2] = a[3] = 1
+    
+    # Tính toán các giá trị tiếp theo dựa trên công thức
+    for i in range(4, max_k + 1):
+        a[i] = a[i - 1] + a[i - 3]
+    
+    return a
+
+def xu_ly_file(input_file, output_file):
+    # Đọc các số k từ file đầu vào
+    with open(input_file, 'r') as inp:
+        k_list = [int(line.strip()) for line in inp.readlines()]
+    
+    # Tìm giá trị lớn nhất của k trong file để tính đến giá trị đó
+    max_k = max(k_list)
+    
+    # Tính dãy số đến giá trị max_k
+    day_so = tinh_day_so(max_k)
+    
+    # Ghi kết quả tương ứng của từng k vào file đầu ra
+    with open(output_file, 'w') as out:
+        for k in k_list:
+            out.write(str(day_so[k]) + '\n')
+
+# Sử dụng hàm với file cụ thể
+xu_ly_file('dayso.inp', 'dayso.out')
+
+# Bài 96: Hai số được coi là bạn của nhau khi tổng các ước số (ngoại trừ chính nó) của số này bằng số kia và ngược lại, cụ thể:
+#  tổng ước số của M = N và tổng ước số của N = M thì M và N là bạn
+# Trong file soban.inp là số K, hãy liệt kê các cặp số M N (với 1 ≤ M < N ≤ K) và ghi vào file soban.out (mỗi cặp một dòng)
+# VD:
+# soban.inp	soban.out
+# 3000	220 284
+# 1184 1210
+# 2620 2924
+def tong_uoc_so(n):
+    total = 0
+    # Tính tổng các ước số của n
+    for i in range(1, int(n**0.5) + 1):
+        if n % i == 0:  # Nếu i là ước số của n
+            total += i
+            if i != n // i and i != 1:  # Thêm ước số đối
+                total += n // i
+    return total
+
+def tim_cac_cap_ban(input_file, output_file):
+    with open(input_file, 'r') as inp:
+        K = int(inp.read().strip())  # Đọc số K từ file
+        
+    cap_ban = []  # Danh sách lưu các cặp bạn
+    
+    # Tạo danh sách để lưu tổng các ước số cho từng số
+    tong_uoc = [0] * (K + 1)
+    
+    # Tính tổng ước số cho từng số từ 1 đến K
+    for n in range(1, K + 1):
+        tong_uoc[n] = tong_uoc_so(n)
+    
+    # Tìm các cặp bạn
+    for M in range(1, K):
+        N = tong_uoc[M]  # Tìm N là tổng ước số của M
+        if M < N <= K and tong_uoc[N] == M:  # Kiểm tra điều kiện bạn
+            cap_ban.append((M, N))
+    
+    # Ghi kết quả vào file
+    with open(output_file, 'w') as out:
+        for M, N in cap_ban:
+            out.write(f"{M} {N}\n")
+
+# Sử dụng hàm với file cụ thể
+tim_cac_cap_ban('soban.inp', 'soban.out')
+
+# Bài 97: Cho N (N ≤ 100) điểm trên hệ trục tọa độ Oxy, hãy đếm xem có bao nhiêu tam giác cân được tạo thành từ các điểm đó.
+# File tgcan.inp:
+# - Dòng đầu tiên trong file chứa số N
+# - N dòng tiếp theo chứa các cặp tọa độ các điểm (mỗi dòng một cặp, mỗi số cách nhau một khoảng trắng)
+# Ghi vào file tgcan.out số lượng tam giác cân tạo được
+# VD:
+# tgcan.inp	tgcan.out
+# 4
+# 0 0
+# 1 0
+# 2 0
+# 1 1
+# 3
