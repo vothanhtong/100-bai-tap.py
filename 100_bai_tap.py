@@ -1495,3 +1495,103 @@ tim_cac_cap_ban('soban.inp', 'soban.out')
 # 2 0
 # 1 1
 # 3
+def khoang_cach_binh_phuong(p1, p2):
+    # Tính bình phương khoảng cách giữa hai điểm p1 và p2
+    return (p1[0] - p2[0]) ** 2 + (p1[1] - p2[1]) ** 2
+
+def dem_tam_giac_can(input_file, output_file):
+    with open(input_file, 'r') as inp:
+        N = int(inp.readline().strip())  # Đọc số điểm N
+        points = [tuple(map(int, inp.readline().strip().split())) for _ in range(N)]  # Đọc tọa độ các điểm
+
+    count = 0  # Đếm số lượng tam giác cân
+
+    # Kiểm tra tất cả các bộ ba điểm để xác định tam giác cân
+    for i in range(N):
+        for j in range(i + 1, N):
+            for k in range(j + 1, N):
+                # Tính bình phương khoảng cách giữa các cặp điểm
+                d1 = khoang_cach_binh_phuong(points[i], points[j])
+                d2 = khoang_cach_binh_phuong(points[j], points[k])
+                d3 = khoang_cach_binh_phuong(points[i], points[k])
+                
+                # Kiểm tra xem có cặp cạnh nào bằng nhau
+                if d1 == d2 or d1 == d3 or d2 == d3:
+                    count += 1  # Nếu có, tăng số lượng tam giác cân
+
+    # Ghi kết quả vào file
+    with open(output_file, 'w') as out:
+        out.write(str(count) + '\n')
+
+# Sử dụng hàm với file cụ thể
+dem_tam_giac_can('tgcan.inp', 'tgcan.out')
+
+# Bài 98:Một doanh nhân, sau khi thực hiện mua bán N (N ≤ 100) chuyến hàng, mỗi chuyến hàng có tổng giá trị mua M và tổng giá trị bán B (M, B có thể lên đến 20 chữ số) mới tính xem mình huề vốn, lời hay lỗ, bao nhiêu tiền. Hãy viết chương trình để giúp doanh nhân trên tính toán kết quả kinh doanh.
+# File kinhdoanh.inp:
+# - Dòng đầu tiên trong file chứa số N
+# - N dòng tiếp theo, mỗi dòng chứa cặp số M và B, hai số này cách nhau một khoảng trắng
+# Ghi ra file kinhdoanh.out số tiền lời (nếu lỗ in ra số âm)
+# VD:
+# kinhdoanh.inp	kinhdoanh.out
+# 5
+# 50 65
+# 150 141
+# 15 30
+# 121 200
+# 300 300	100
+def tinh_ket_qua_kinh_doanh(input_file, output_file):
+    with open(input_file, 'r') as inp:
+        N = int(inp.readline().strip())  # Đọc số chuyến hàng N
+        tong_mua = 0  # Khởi tạo tổng giá trị mua
+        tong_ban = 0  # Khởi tạo tổng giá trị bán
+        
+        # Đọc từng cặp M và B và tính tổng
+        for _ in range(N):
+            M, B = map(int, inp.readline().strip().split())
+            tong_mua += M
+            tong_ban += B
+
+    # Tính lợi nhuận
+    loi_nhuan = tong_ban - tong_mua
+
+    # Ghi kết quả vào file
+    with open(output_file, 'w') as out:
+        out.write(str(loi_nhuan) + '\n')
+
+# Sử dụng hàm với file cụ thể
+tinh_ket_qua_kinh_doanh('kinhdoanh.inp', 'kinhdoanh.out')
+
+# Bài 99: Từ chuỗi ngày/tháng/năm theo cấu trúc dd/mm/yyyy và số N (N ≤ 1000) cho trước. Hãy cho biết ngày/tháng/năm (dd/mm/yyyy) sau N ngày.
+# File ngay.inp:
+# - Chứa ngày/tháng/năm và số N
+# File ngay.out:
+# - Chứa kết quả là ngày/tháng/năm sau N ngày
+
+# VD:
+
+# ngay.inp	ngay.out
+# 15/03/2017 100	23/06/2017
+from datetime import datetime, timedelta
+
+def tinh_ngay_sau_N(input_file, output_file):
+    with open(input_file, 'r') as inp:
+        # Đọc dòng đầu tiên và tách ngày tháng năm và N
+        line = inp.readline().strip()
+        date_str, N_str = line.split()
+        N = int(N_str)  # Chuyển đổi N thành số nguyên
+
+        # Chuyển đổi chuỗi ngày tháng năm thành đối tượng datetime
+        start_date = datetime.strptime(date_str, '%d/%m/%Y')
+
+        # Tính ngày sau N ngày
+        new_date = start_date + timedelta(days=N)
+
+        # Chuyển đổi đối tượng datetime về định dạng dd/mm/yyyy
+        result_date_str = new_date.strftime('%d/%m/%Y')
+
+    # Ghi kết quả vào file
+    with open(output_file, 'w') as out:
+        out.write(result_date_str + '\n')
+
+# Sử dụng hàm với file cụ thể
+tinh_ngay_sau_N('ngay.inp', 'ngay.out')
