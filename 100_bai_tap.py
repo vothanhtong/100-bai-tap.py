@@ -1243,3 +1243,114 @@ in_day_collatz(m)
 # N = 5, M = 3
 # doankhach = [2,3,2]
 # Ta in: 2, 2, 1, 2, 0
+def xep_khach_san(N, M, doankhach):
+    # Bước 1: Khởi tạo danh sách số lượng khách trong mỗi phòng
+    phong = [0] * N  # Ban đầu tất cả các phòng đều trống
+    
+    index = 0  # Biến để theo dõi phòng hiện tại
+
+    # Bước 2: Xếp khách cho từng đoàn
+    for so_khach in doankhach:
+        while so_khach > 0:
+            # Nếu phòng hiện tại còn trống (phong[index] < 2)
+            if phong[index] < 2:
+                # Số khách xếp vào phòng này (tối đa 2 - phong[index])
+                xep_vao_phong = min(so_khach, 2 - phong[index])
+                phong[index] += xep_vao_phong
+                so_khach -= xep_vao_phong
+            
+            # Chuyển sang phòng tiếp theo
+            index += 1
+            if index == N:
+                index = 0  # Quay lại phòng đầu tiên nếu hết phòng
+            
+    # Bước 3: In kết quả
+    print(",".join(map(str, phong)))
+
+# Ví dụ 1:
+N = 7
+M = 3
+doankhach = [3, 7, 3]
+xep_khach_san(N, M, doankhach)  # Output: 2,2,2,2,2,1,2
+
+# Ví dụ 2:
+N = 5
+M = 3
+doankhach = [2, 3, 2]
+xep_khach_san(N, M, doankhach)  # Output: 2,2,1,2,0
+
+# BÀI TẬP XỬ LÝ ĐỌC GHI FILE
+# Bài 92:File 2to10.inp là file chứa các số nhị phân (mỗi dòng 1 số), hãy chuyển các số nhị phân đó sang số thập phân rồi lưu lại vào file 2to10.out (mỗi dòng 1 số)
+# VD
+# 2to10.inp
+# 2to10.out
+# 0011
+# 111110000011111
+# 1001010100000010111110001111111111	3
+# 31775
+# 9999999999
+def binary_to_decimal(input_file, output_file):
+    with open(input_file, 'r') as inp, open(output_file, 'w') as out:
+        # Đọc từng dòng trong file đầu vào
+        for line in inp:
+            binary_str = line.strip()  # Loại bỏ các ký tự trắng (nếu có)
+            
+            try:
+                # Chuyển từ nhị phân sang thập phân
+                decimal_number = int(binary_str, 2)
+                # Ghi kết quả vào file đầu ra
+                out.write(str(decimal_number) + '\n')
+            except ValueError:
+                # Nếu không phải là số nhị phân hợp lệ thì ghi "INVALID"
+                out.write("INVALID\n")
+
+# Sử dụng hàm với file cụ thể
+binary_to_decimal('2to10.inp', '2to10.out')
+
+# Bài 93:Hãy phân tích một số tự nhiên thành các thừa số nguyên tố
+# File thuaso.inp:
+# - Chứa các số tự nhiên lớn hơn 1(mỗi số cách nhau một dòng)
+# File thuaso.out:
+# - Kết quả phân tích từng số trong file thuaso.inp, 
+# mỗi một dòng tương ứng với kết quả tách được được từ trong file thuaso.inp, các thừa số cách nhau bằng một khoảng trắng
+# VD:
+# thuaso.inp	thuaso.out
+# 2
+# 8
+# 10
+# 15
+# 100
+# 101
+# 10250	2
+# 2 2 2
+# 2 5
+# 3 5
+# 2 2 5 5
+# 101
+# 2 5 5 5 41
+def phan_tich_thua_so(n):
+    i = 2
+    thua_so = []
+    # Phân tích số n thành thừa số nguyên tố
+    while i * i <= n:  # Kiểm tra các thừa số từ 2 đến sqrt(n)
+        while n % i == 0:  # Nếu n chia hết cho i
+            thua_so.append(i)
+            n //= i  # Chia n cho i
+        i += 1
+    if n > 1:  # Số còn lại là thừa số nguyên tố cuối cùng
+        thua_so.append(n)
+    return thua_so
+
+def xu_ly_file(input_file, output_file):
+    with open(input_file, 'r') as inp, open(output_file, 'w') as out:
+        # Đọc từng dòng trong file đầu vào
+        for line in inp:
+            number = int(line.strip())  # Lấy số tự nhiên từ file
+            thua_so = phan_tich_thua_so(number)  # Phân tích thành thừa số
+            # Ghi kết quả vào file, các thừa số cách nhau bằng khoảng trắng
+            out.write(" ".join(map(str, thua_so)) + "\n")
+
+# Sử dụng hàm với file thuaso.inp và thuaso.out
+xu_ly_file('thuaso.inp', 'thuaso.out')
+
+# Bài 94: 
