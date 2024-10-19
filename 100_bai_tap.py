@@ -1095,16 +1095,13 @@
 
 #     # Tính thuế (5%)
 #     thue = tong_truoc_thue * 0.05
-
 #     # Tổng sau thuế
 #     tong_sau_thue = tong_truoc_thue + thue
-
 #     # In hóa đơn
 #     print("\nHóa đơn:")
 #     print(f"{'Gà rán':<20}{menu['Gà rán']:>6,}đ x {so_luong_ga_ran}")
 #     print(f"{'Hamburger':<20}{menu['Hamburger']:>6,}đ x {so_luong_hamburger}")
 #     print(f"{'Cocacola':<20}{menu['Cocacola']:>6,}đ x {so_luong_cocacola}")
-
 #     print("\nTổng:")
 #     print(f"{'Gà rán':<20}{tong_ga_ran:>6,}đ")
 #     print(f"{'Hamburger':<20}{tong_hamburger:>6,}đ")
@@ -1112,10 +1109,8 @@
 #     print(f"{'Tổng trước thuế':<20}{tong_truoc_thue:>6,}đ")
 #     print(f"{'Thuế(5%)':<20}{thue:>6,.0f}đ")
 #     print(f"{'Tổng sau thuế':<20}{tong_sau_thue:>6,.0f}đ")
-
 # # Gọi hàm để in hóa đơn
 # in_hoa_don()
- 
 # # Bài 87:Viết hàm cho giá trị đầu vào là list số nguyên dương L và số nguyên dương k.
 # #  Hãy tạo và trả về một list L_kq có các phần tử là giá trị của phần tử xuất hiện nhiều hơn k lần trong list L theo thứ tự tăng dần
 # def tim_phan_tu_xuat_hien_hon_k(L, k):
@@ -1134,13 +1129,11 @@
 #     L_kq.sort()
 
 #     return L_kq
-
 # # Ví dụ sử dụng
 # L = [1, 2, 2, 3, 3, 3, 4, 4, 4, 4]
 # k = 2
 # L_kq = tim_phan_tu_xuat_hien_hon_k(L, k)
 # print(L_kq)  # Kết quả sẽ là [3, 4]
-
 # # Bài 88: Viết hàm cho giá trị đầu vào là list số nguyên dương L và số nguyên dương k. 
 # # Tìm và trả về đoạn list dài nhất trong L có giá trị trung bình là k
 # def tim_doan_list_trung_binh_k(L, k):
@@ -1161,7 +1154,6 @@
 #                     longest_sublist = sublist
 
 #     return longest_sublist
-
 # # Ví dụ sử dụng
 # L = [1, 2, 3, 4, 5, 6, 7]
 # k = 4
@@ -1194,28 +1186,22 @@
 #                 # Cập nhật số lượng nguyên liệu lớn nhất nếu tìm thấy giá trị lớn hơn
 #                 if so_luong > max_nguyen_lieu:
 #                     max_nguyen_lieu = so_luong
-
 #     return round(max_nguyen_lieu, 2)  # Trả về số lượng với 2 chữ số thập phân
-
 # # Ví dụ sử dụng:
 # U = 1000  # Số tiền đô-la
 # V = 800   # Số tiền Euro
 # A = [50, 60, 70]  # Giá bán đô-la/kg của các công ty
 # B = [40, 30, 50]  # Giá bán Euro/kg của các công ty
-
 # ket_qua = so_luong_nguyen_lieu(U, V, A, B)
 # print(ket_qua)  # Kết quả sẽ là số lượng nguyên liệu lớn nhất với 2 chữ số thập phân
-
 # Bài 90: Phỏng đoán COLLATZ
 # Giả sử ta có một số n
 # Phỏng đoán COLLATZ hoạt động như sau:
 # Nếu n là số chẵn, thì ta chia n cho 2 (n/2)
 # Nếu n là số lẻ, thì ta nhân n cho 3 rồi + 1 (3n + 1)
 # Phỏng đoán hoạt động cho đến khi nào n = 1
-
 # Yêu cầu:
 # Nhập vào số nguyên dương m, hãy in ra dãy phỏng đoán COLLATZ từ 1 đến m (mỗi một phỏng đoán ta in trên 1 dòng, mỗi một số cách nhau một dấu phẩy)
-
 # Ví dụ:
 # Nhập: m = 6
 # In ra:
@@ -1242,3 +1228,18 @@ def in_day_collatz(m):
 # Ví dụ sử dụng:
 m = int(input("Nhập m: "))
 in_day_collatz(m)
+
+# Bài 91:Một khách sạn có N phòng đôi được đánh số từ 1 đến N và M đoàn khách.
+# Với mỗi đoàn khách, ta xếp mỗi cặp khách của đoàn vào một phòng trống theo thứ tự phòng tăng dần.
+# Nếu đoàn khách có số người lẻ thì người khách cuối cùng được xếp vào một phòng trống tiếp theo.
+# Nếu đã hết phòng còn trống thì ta sẽ xếp khách vào những phòng mới chỉ có 1 khách theo thứ tự phòng tăng dần.
+# In ra số khách của mỗi phòng sau khi xếp.
+# Giả sử không có 2 đoàn khách nào đến cùng một lúc.
+# Ví dụ 1:
+# N = 7, M = 3
+# doankhach = [3,7,3]
+# Ta in: 2, 2, 2, 2, 2, 1, 2
+# Ví dụ 2:
+# N = 5, M = 3
+# doankhach = [2,3,2]
+# Ta in: 2, 2, 1, 2, 0
