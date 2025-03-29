@@ -23,3 +23,26 @@
 # L_mahoa, D = ma_hoa_list(L)
 # print("List mã hóa:", L_mahoa)  # Kết quả sẽ là [0, 1, 2, 1, 2, 3, 4]
 # print("Dictionary mã hóa:", D)   # Kết quả sẽ là {'đen': 0, 'vàng': 1, 'xanh': 2, 'đỏ': 3, 'hồng': 4}
+
+def ma_hoa_list(L):
+    """
+    Hàm mã hóa danh sách các chuỗi thành các số nguyên duy nhất.
+    :param L: Danh sách các chuỗi
+    :return: Danh sách mã hóa và dictionary mã hóa
+    """
+    D = {}  # Tạo dictionary mã hóa
+    L_mahoa = []  # Danh sách mã hóa
+
+    # Bước 1: Tạo dictionary mã hóa
+    for item in L:
+        if item not in D:
+            D[item] = len(D)  # Gán mã cho phần tử mới
+        L_mahoa.append(D[item])  # Thêm giá trị mã hóa vào danh sách kết quả
+
+    return L_mahoa, D  # Trả về danh sách mã hóa và dictionary
+
+# Ví dụ sử dụng
+L = ["đen", "vàng", "xanh", "vàng", "xanh", "đỏ", "hồng"]
+L_mahoa, D = ma_hoa_list(L)
+print("List mã hóa:", L_mahoa)  # Kết quả sẽ là [0, 1, 2, 1, 2, 3, 4]
+print("Dictionary mã hóa:", D)   # Kết quả sẽ là {'đen': 0, 'vàng': 1, 'xanh': 2, 'đỏ': 3, 'hồng': 4}

@@ -35,3 +35,33 @@
 # L = [3, 1, 4, 4, 5, 5, 2]
 # a = 2
 # print(gia_tri_lon_thu_a(L, a))  # Kết quả sẽ là 4
+
+def gia_tri_lon_thu_a(L, a):
+    """
+    Hàm tìm giá trị lớn thứ a trong danh sách L.
+    :param L: Danh sách các số nguyên
+    :param a: Số nguyên dương, thứ hạng giá trị cần tìm
+    :return: Giá trị lớn thứ a hoặc thông báo nếu không tìm thấy
+    """
+    # Kiểm tra đầu vào
+    if not L:
+        return "Danh sách rỗng, không thể tìm giá trị."
+    if a <= 0:
+        return "Thứ hạng a phải là số nguyên dương."
+
+    # Loại bỏ các số trùng lặp và sắp xếp giảm dần
+    unique_values = sorted(set(L), reverse=True)
+
+    # Kiểm tra xem a có nằm trong phạm vi hợp lệ không
+    if a <= len(unique_values):
+        return unique_values[a - 1]  # Trả về giá trị lớn thứ a
+    else:
+        return f"Không có giá trị lớn thứ {a} trong danh sách."
+
+# Ví dụ sử dụng
+L = [3, 1, 4, 4, 5, 5, 2]
+a = 2
+print(gia_tri_lon_thu_a(L, a))  # Kết quả sẽ là 4
+
+a = 6
+print(gia_tri_lon_thu_a(L, a))  # Kết quả sẽ là "Không có giá trị lớn thứ 6 trong danh sách."

@@ -25,3 +25,31 @@ if (0<=a<=10,0<=b<=10,0<=c<=10):
          print("học sinh kém: ")
 else: 
     print("bạn đã nhập sai: ")
+# C2
+#    
+    # BÀI 22: Nhập điểm toán, văn, anh.
+# Xét loại học sinh dựa trên điểm trung bình và các điều kiện cụ thể.
+
+# Nhập điểm
+toan = float(input("Nhập điểm Toán: "))
+van = float(input("Nhập điểm Văn: "))
+anh = float(input("Nhập điểm Anh: "))
+
+# Kiểm tra điểm có hợp lệ hay không
+if 0 <= toan <= 10 and 0 <= van <= 10 and 0 <= anh <= 10:
+    # Tính điểm trung bình
+    dtb = (toan + van + anh) / 3
+
+    # Xét loại học sinh
+    if dtb >= 8 and (toan >= 8 or van >= 8) and min(toan, van, anh) >= 6.5:
+        print("Học sinh giỏi")
+    elif dtb >= 6.5 and (toan >= 6.5 or van >= 6.5) and min(toan, van, anh) >= 5:
+        print("Học sinh khá")
+    elif dtb >= 5 and (toan >= 5 or van >= 5) and min(toan, van, anh) >= 3.5:
+        print("Học sinh trung bình")
+    elif dtb >= 3.5 and (toan >= 3.5 or van >= 3.5) and min(toan, van, anh) >= 2:
+        print("Học sinh yếu")
+    else:
+        print("Học sinh kém")
+else:
+    print("Bạn đã nhập sai điểm. Điểm phải nằm trong khoảng từ 0 đến 10.")
