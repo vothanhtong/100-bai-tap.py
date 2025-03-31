@@ -32,3 +32,35 @@
 # B = [40, 30, 50]  # Giá bán Euro/kg của các công ty
 # ket_qua = so_luong_nguyen_lieu(U, V, A, B)
 # print(ket_qua)  # Kết quả sẽ là số lượng nguyên liệu lớn nhất với 2 chữ số thập phân
+
+
+def so_luong_nguyen_lieu_toi_da(U, V, A, B):
+    """
+    Hàm tính số lượng nguyên liệu lớn nhất có thể mua từ một công ty duy nhất.
+    :param U: Số tiền đô-la
+    :param V: Số tiền Euro
+    :param A: Danh sách giá bán đô-la/kg của các công ty
+    :param B: Danh sách giá bán Euro/kg của các công ty
+    :return: Số lượng nguyên liệu lớn nhất (với 2 chữ số thập phân)
+    """
+    N = len(A)  # Số lượng công ty
+    max_nguyen_lieu = 0.0  # Lượng nguyên liệu lớn nhất
+
+    # Duyệt qua từng công ty
+    for i in range(N):
+        # Tính số lượng nguyên liệu mua được bằng đô-la và Euro
+        so_luong_dola = U / A[i]
+        so_luong_euro = V / B[i]
+
+        # Lấy giá trị lớn nhất giữa hai cách mua
+        max_nguyen_lieu = max(max_nguyen_lieu, so_luong_dola, so_luong_euro)
+
+    return round(max_nguyen_lieu, 2)  # Trả về số lượng với 2 chữ số thập phân
+
+# Ví dụ sử dụng:
+U = 1000  # Số tiền đô-la
+V = 800   # Số tiền Euro
+A = [50, 60, 70]  # Giá bán đô-la/kg của các công ty
+B = [40, 30, 50]  # Giá bán Euro/kg của các công ty
+ket_qua = so_luong_nguyen_lieu_toi_da(U, V, A, B)
+print(ket_qua)  # Kết quả sẽ là số lượng nguyên liệu lớn nhất với 2 chữ số thập phân
