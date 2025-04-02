@@ -47,3 +47,23 @@
 # M = 3
 # doankhach = [2, 3, 2]
 # xep_khach_san(N, M, doankhach)  # Output: 2,2,1,2,0
+
+
+def xep_khach_san(N, doankhach):
+    phong = [0] * N  # Khởi tạo danh sách số lượng khách trong mỗi phòng
+    index = 0  # Vị trí phòng hiện tại
+
+    for so_khach in doankhach:
+        while so_khach > 0:
+            xep_vao_phong = min(so_khach, 2 - phong[index])  # Số khách xếp vào phòng
+            phong[index] += xep_vao_phong
+            so_khach -= xep_vao_phong
+            index = (index + 1) % N  # Chuyển sang phòng tiếp theo (vòng lặp)
+
+    print(",".join(map(str, phong)))  # In kết quả
+
+# Ví dụ 1:
+xep_khach_san(7, [3, 7, 3])  # Output: 2,2,2,2,2,1,2
+
+# Ví dụ 2:
+xep_khach_san(5, [2, 3, 2])  # Output: 2,2,1,2,0
