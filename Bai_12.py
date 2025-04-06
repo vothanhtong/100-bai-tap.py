@@ -9,3 +9,16 @@ if 100<=d<=200:
     print("TRUE")
 else:
     print("FALSE")
+
+
+# BÀI 13: Nhập vào 3 số x, y, z. Tính và in ra k = (x * y) + z
+# Nếu k là số chẵn thì in ra True, ngược lại in ra False
+x = int(input("Nhập vào số nguyên x: "))
+y = int(input("Nhập vào số nguyên y: "))
+z = int(input("Nhập vào số nguyên z: "))
+k = (x * y) + z
+print("Giá trị của k là:", k)
+if k % 2 == 0:
+    print("TRUE")
+else:
+    print("FALSE")
