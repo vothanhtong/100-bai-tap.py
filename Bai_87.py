@@ -1,23 +1,34 @@
-# # Bài 87:Viết hàm cho giá trị đầu vào là list số nguyên dương L và số nguyên dương k.
-# #  Hãy tạo và trả về một list L_kq có các phần tử là giá trị của phần tử xuất hiện nhiều hơn k lần trong list L theo thứ tự tăng dần
-# def tim_phan_tu_xuat_hien_hon_k(L, k):
-#     # Bước 1: Tạo dictionary đếm số lần xuất hiện của từng phần tử
-#     dem = {}
-#     for num in L:
-#         if num in dem:
-#             dem[num] += 1
-#         else:
-#             dem[num] = 1
+from collections import Counter
 
-#     # Bước 2: Tìm các phần tử xuất hiện nhiều hơn k lần
-#     L_kq = [num for num, count in dem.items() if count > k]
+# Bài 87: Tìm các phần tử xuất hiện nhiều hơn k lần trong danh sách
+def tim_phan_tu_xuat_hien_hon_k(L, k):
+    """
+    Hàm tìm các phần tử xuất hiện nhiều hơn k lần trong danh sách L.
 
-#     # Bước 3: Sắp xếp danh sách kết quả theo thứ tự tăng dần
-#     L_kq.sort()
+    Args:
+        L (list): Danh sách các số nguyên dương.
+        k (int): Số lần xuất hiện tối thiểu.
 
-#     return L_kq
-# # Ví dụ sử dụng
-# L = [1, 2, 2, 3, 3, 3, 4, 4, 4, 4]
-# k = 2
-# L_kq = tim_phan_tu_xuat_hien_hon_k(L, k)
-# print(L_kq)  # Kết quả sẽ là [3, 4]s
+    Returns:
+        list: Danh sách các phần tử xuất hiện nhiều hơn k lần, sắp xếp tăng dần.
+    """
+    # Kiểm tra đầu vào
+    if not all(isinstance(x, int) and x > 0 for x in L):
+        raise ValueError("Danh sách L phải chứa toàn số nguyên dương.")
+    if not isinstance(k, int) or k <= 0:
+        raise ValueError("k phải là một số nguyên dương.")
+
+    # Đếm số lần xuất hiện của từng phần tử
+    dem = Counter(L)
+
+    # Lọc các phần tử xuất hiện nhiều hơn k lần
+    L_kq = [num for num, count in dem.items() if count > k]
+
+    # Sắp xếp danh sách kết quả theo thứ tự tăng dần
+    return sorted(L_kq)
+
+# Ví dụ sử dụng
+L = [1, 2, 2, 3, 3, 3, 4, 4, 4, 4]
+k = 2
+L_kq = tim_phan_tu_xuat_hien_hon_k(L, k)
+print(L_kq)  # Kết quả sẽ là [3, 4]
