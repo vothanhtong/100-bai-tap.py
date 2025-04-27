@@ -43,8 +43,8 @@ def dao_nguoc_tu(chuoi):
 
 chuoi = input("Nhập vào một chuỗi: ")
 dao_nguoc_tu(chuoi)
-Bài 44 H: Đếm số lần xuất hiện của từng từ trong chuỗi
-Ví dụ chạy chương trình:
+# Bài 44 H: Đếm số lần xuất hiện của từng từ trong chuỗi
+# Ví dụ chạy chương trình:
 
 def dem_tan_suat_tu(chuoi):
     """
