@@ -14,3 +14,29 @@ for i in chuoi :
 if chuoitam != "":
     tong += int(chuoitam)
 print(tong)
+
+import re
+
+def tinh_tong_cac_so_trong_chuoi(chuoi):
+    """
+    Tách toàn bộ các số trong chuỗi và tính tổng của chúng.
+    Args:
+        chuoi (str): Chuỗi chứa các số và ký tự khác.
+    Returns:
+        int: Tổng các số trong chuỗi.
+    """
+    # Sử dụng regex để tìm tất cả các số trong chuỗi
+    cac_so = re.findall(r'\d+', chuoi)
+    # Tính tổng các số
+    return sum(map(int, cac_so))
+
+def main():
+    # Nhập chuỗi từ người dùng
+    chuoi = input("Nhập vào một chuỗi: ")
+    # Tính tổng các số trong chuỗi
+    tong = tinh_tong_cac_so_trong_chuoi(chuoi)
+    print(f"Tổng các số trong chuỗi là: {tong}")
+
+# Gọi hàm main để chạy chương trình
+if __name__ == "__main__":
+    main()
