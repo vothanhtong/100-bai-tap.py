@@ -17,14 +17,14 @@ else:
     print("List sau khi hoán đổi:", L)
 
     def hoan_doi_min_max(L):
-    """
-    Hoán đổi vị trí giữa giá trị nhỏ nhất và lớn nhất trong danh sách.
-    Args:
-        L (list): Danh sách các số nguyên.
-    Returns:
-        list: Danh sách sau khi hoán đổi.
-    """
-    if len(L) <= 1:
+    # """
+    # Hoán đổi vị trí giữa giá trị nhỏ nhất và lớn nhất trong danh sách.
+    # Args:
+    #     L (list): Danh sách các số nguyên.
+    # Returns:
+    #     list: Danh sách sau khi hoán đổi.
+    # """
+    # if len(L) <= 1:
         print("Danh sách chỉ có một phần tử hoặc rỗng, không cần hoán đổi.")
         return L
 
@@ -34,7 +34,7 @@ else:
 
     # Hoán đổi giá trị nhỏ nhất và lớn nhất
     L[min_index], L[max_index] = L[max_index], L[min_index]
-    return L
+    # return L
 
 def main():
     try:
