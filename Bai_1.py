@@ -1,37 +1,20 @@
-# BÀI TẬP NHẬP LIỆU VÀ TOÁN TỬ CƠ BẢN
-# BÀI 1: Nhập vào số n, hãy nhân n lên cho 3, rồi cộng 1 sau đó in kết quả ra màn hình
-a=int(input("nhập vào số nguyên a: "))
-n=(a*3)+1
-print("khi a nhân cho ba và cộng cho một là: ",n)
-
-# BÀI 2: Nhập vào hai số nguyên a và b, tính tổng, hiệu, tích, thương của chúng
+# BÀI 1: Nhập vào số n, nhân n lên cho 3, rồi cộng 1
 a = int(input("Nhập vào số nguyên a: "))
-b = int(input("Nhập vào số nguyên b: "))
-tong = a + b
-hieu = a - b
-tich = a * b
-thuong = a / b if b != 0 else "Không thể chia cho 0"
-print("Tổng của a và b là:", tong)
-print("Hiệu của a và b là:", hieu)
-print("Tích của a và b là:", tich)
-print("Thương của a và b là:", thuong)
+print("Kết quả:", (a * 3) + 1)
 
-# BÀI 3: Nhập vào bán kính r của hình tròn, tính diện tích và chu vi
+# BÀI 2: Nhập hai số nguyên a và b, tính tổng, hiệu, tích, thương
+a, b = map(int, input("Nhập hai số nguyên a và b, cách nhau bởi khoảng trắng: ").split())
+print(f"Tổng: {a + b}, Hiệu: {a - b}, Tích: {a * b}, Thương: {a / b if b != 0 else 'Không thể chia cho 0'}")
+
+# BÀI 3: Nhập bán kính r, tính diện tích và chu vi hình tròn
 import math
-r = float(input("Nhập vào bán kính r: "))
-chu_vi = 2 * math.pi * r
-dien_tich = math.pi * r ** 2
-print("Chu vi hình tròn là:", chu_vi)
-print("Diện tích hình tròn là:", dien_tich)
+r = float(input("Nhập bán kính r: "))
+print(f"Chu vi: {2 * math.pi * r}, Diện tích: {math.pi * r ** 2}")
 
-# BÀI 4: Nhập vào một số nguyên n, kiểm tra xem n là số chẵn hay lẻ
-n = int(input("Nhập vào số nguyên n: "))
-if n % 2 == 0:
-    print(f"{n} là số chẵn.")
-else:
-    print(f"{n} là số lẻ.")
+# BÀI 4: Nhập số nguyên n, kiểm tra chẵn hay lẻ
+n = int(input("Nhập số nguyên n: "))
+print(f"{n} là số {'chẵn' if n % 2 == 0 else 'lẻ'}.")
 
-# BÀI 5: Nhập vào một số nguyên n, tính n bình phương
-n = int(input("Nhập vào số nguyên n: "))
-binh_phuong = n ** 2
-print(f"Bình phương của {n} là: {binh_phuong}")
+# BÀI 5: Nhập số nguyên n, tính bình phương
+n = int(input("Nhập số nguyên n: "))
+print(f"Bình phương của {n} là: {n ** 2}")
