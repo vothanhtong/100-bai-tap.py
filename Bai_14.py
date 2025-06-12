@@ -34,3 +34,29 @@ else:
 # Gọi hàm main để chạy chương trình
 if __name__ == "__main__":
     main()
+    
+def nhap_so_nguyen_duong(thong_bao):
+    while True:
+        try:
+            a = int(input(thong_bao))
+            if a > 0:
+                return a
+            else:
+                print("Vui lòng nhập số nguyên dương lớn hơn 0!")
+        except ValueError:
+            print("Vui lòng nhập một số nguyên hợp lệ!")
+
+def kiem_tra_chan_le(a):
+    if a % 2 == 0:
+        return "Đây là số chẵn."
+    else:
+        return "Đây là số lẻ."
+
+def main():
+    print("=== KIỂM TRA SỐ CHẴN LẺ ===")
+    a = nhap_so_nguyen_duong("Nhập vào số nguyên dương a: ")
+    print("Số bạn vừa nhập là:", a)
+    print(kiem_tra_chan_le(a))
+
+if __name__ == "__main__":
+    main()
