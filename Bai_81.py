@@ -65,3 +65,20 @@ print(gia_tri_lon_thu_a(L, a))  # Kết quả sẽ là 4
 
 a = 6
 print(gia_tri_lon_thu_a(L, a))  # Kết quả sẽ là "Không có giá trị lớn thứ 6 trong danh sách."
+
+def gia_tri_lon_thu_a(L, a):
+    if not L or a <= 0:
+        return None
+    unique_values = sorted(set(L), reverse=True)
+    return unique_values[a - 1] if a <= len(unique_values) else None
+
+# Ví dụ sử dụng
+L = [3, 1, 4, 4, 5, 5, 2]
+print(gia_tri_lon_thu_a(L, 2))  # 4
+print(gia_tri_lon_thu_a(L, 6))  # None
+
+def gia_tri_lon_thu_a(L, a):
+    if not L or a <= 0:
+        return "Danh sách rỗng hoặc a không hợp lệ."
+    unique_values = sorted(set(L), reverse=True)
+    return unique_values[a - 1] if a <= len(unique_values) else f"Không có giá trị lớn thứ {a} trong danh
