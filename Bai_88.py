@@ -57,3 +57,25 @@ L = [1, 2, 3, 4, 5, 6, 7]
 k = 4
 longest_sublist = tim_doan_list_trung_binh_k(L, k)
 print(longest_sublist)  # Kết quả sẽ là [3, 4, 5]
+
+
+def tim_doan_list_trung_binh_k(L, k):
+    if not L or k <= 0 or not all(isinstance(x, int) and x > 0 for x in L):
+        return []
+    n = len(L)
+    max_len = 0
+    result = []
+    for i in range(n):
+        total = 0
+        for j in range(i, n):
+            total += L[j]
+            length = j - i + 1
+            if total == k * length and length > max_len:
+                max_len = length
+                result = L[i:j+1]
+    return result
+
+# Ví dụ sử dụng
+L = [1, 2, 3, 4, 5, 6, 7]
+k = 4
+print(tim_doan_list_trung_binh_k(L, k))  # [3, 4, 5]

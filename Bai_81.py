@@ -81,4 +81,4 @@ def gia_tri_lon_thu_a(L, a):
     if not L or a <= 0:
         return "Danh sách rỗng hoặc a không hợp lệ."
     unique_values = sorted(set(L), reverse=True)
-    return unique_values[a - 1] if a <= len(unique_values) else f"Không có giá trị lớn thứ {a} trong danh
+    return unique_values[a - 1] if a <= len(unique_values) else f"Không có giá trị lớn thứ {a} trong danh."
