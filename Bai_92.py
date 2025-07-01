@@ -25,3 +25,12 @@
 
 # # Sử dụng hàm với file cụ thể
 # binary_to_decimal('2to10.inp', '2to10.out')
+
+def binary_to_decimal(input_file, output_file):
+    with open(input_file) as inp, open(output_file, 'w') as out:
+        out.writelines(
+            f"{int(line.strip(), 2)}\n" if all(c in '01' for c in line.strip()) else "INVALID\n"
+            for line in inp
+        )
+
+binary_to_decimal('2to10.inp', '2to10.out')
