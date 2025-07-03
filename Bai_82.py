@@ -13,3 +13,9 @@
 # d = {'a': 10, 'b': 20, 'c': 15}
 # result = key_max_value(d)
 # print(result)  # Kết quả sẽ là 'b'
+def key_max_value(d):
+    return max(d, key=d.get) if d else None
+
+# Ví dụ sử dụng
+d = {'a': 10, 'b': 20, 'c': 15}
+print(key_max_value(d))  # Kết quả: 'b'
