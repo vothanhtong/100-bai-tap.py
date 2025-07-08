@@ -37,3 +37,11 @@
 
 # # Sử dụng hàm với file cụ thể
 # tach_chu_so('chuoi.inp', 'chuoi.out')
+def tach_chu_so(input_file, output_file):
+    with open(input_file, 'r', encoding='utf-8') as inp:
+        chuoi = inp.read().strip()
+
+    chuoi_chu = ''.join([c for c in chuoi if c.isalpha()]) or '-'
+    chuoi_so = ''.join([c for c in chuoi if c.isdigit()]) or '-'
+
+    with open(output_file, 'w', encoding
