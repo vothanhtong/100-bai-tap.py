@@ -44,4 +44,4 @@ def tach_chu_so(input_file, output_file):
     chuoi_chu = ''.join([c for c in chuoi if c.isalpha()]) or '-'
     chuoi_so = ''.join([c for c in chuoi if c.isdigit()]) or '-'
 
-    with open(output_file, 'w', encoding
+    with open(output_file, 'w', encoding)
