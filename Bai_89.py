@@ -64,3 +64,28 @@ A = [50, 60, 70]  # Giá bán đô-la/kg của các công ty
 B = [40, 30, 50]  # Giá bán Euro/kg của các công ty
 ket_qua = so_luong_nguyen_lieu_toi_da(U, V, A, B)
 print(ket_qua)  # Kết quả sẽ là số lượng nguyên liệu lớn nhất với 2 chữ số thập phân
+
+def so_luong_nguyen_lieu_toi_da(U, V, A, B):
+    """
+    Tính số lượng nguyên liệu lớn nhất có thể mua từ một công ty
+    với USD hoặc Euro, chỉ chọn một hình thức thanh toán tại mỗi công ty.
+
+    :param U: Số tiền USD
+    :param V: Số tiền Euro
+    :param A: Danh sách giá bán (USD/kg) của các công ty
+    :param B: Danh sách giá bán (Euro/kg) của các công ty
+    :return: Số lượng nguyên liệu tối đa (float, làm tròn 2 chữ số)
+    """
+    max_nguyen_lieu = max(
+        max(U / A[i], V / B[i]) for i in range(len(A))
+    )
+    return round(max_nguyen_lieu, 2)
+
+
+# Ví dụ
+if __name__ == "__main__":
+    U = 1000  # USD
+    V = 800   # Euro
+    A = [50, 60, 70]
+    B = [40, 30, 50]
+    print(so_luong_nguyen_lieu_toi_da(U, V, A, B))
